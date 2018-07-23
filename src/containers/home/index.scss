@@ -1,0 +1,47 @@
+
+.home{
+  position: relative;
+  height: 100%;
+  overflow: auto;
+  .scroll{
+    padding: 70px 30px;
+    .item{
+      color: #ddd;
+      .h5{
+        text-align: center;
+        font-size: 26px;
+        letter-spacing: 1px;
+      }
+      .info{
+        font-size: 12px;
+        color: #aaa;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 40px;
+        a{color: #aaa;}
+      }
+      .descript{
+        line-height: 1.5;
+        margin: 30px 0;
+      }
+      .btn{
+        padding: 50px 0;
+        text-align: center;
+        a{
+          color: #666;
+          padding: 7px 14px;
+          background: #fff;
+          border-radius: 2px;
+          &:hover{
+            opacity: .9;
+          }
+        }
+      }
+      hr{
+        width: 50px;
+        opacity: .2;
+        margin: 30px auto;
+      }
+    }
+  }
+}

@@ -16,6 +16,10 @@ class Home extends React.Component {
                        render={props => (<LazyRoute {...props} component={import ('./home')}/>)}/>
                 <Route  path='/article/:id'
                         render={props => (<LazyRoute {...props} component={import ('./article')}/>)}/>
+                <Route exact  path='/cate'
+                        render={props => (<LazyRoute {...props} component={import ('./cate')}/>)}/>
+                <Route exact path='/cate/:id'
+                        render={props => (<LazyRoute {...props} component={import ('./home')}/>)}/>
             </Layer>
             <div><canvas ref='canvas'></canvas></div>
         </div>

@@ -1,9 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import './index.scss';
-// import {observer} from 'mobx-react'
-
-// @observer
 export default class Main extends React.Component {
 
     render() {
@@ -16,29 +13,39 @@ export default class Main extends React.Component {
                             <span>Learning together</span>
                         </div>
                         <div className="cate">
-                            <div className="item">
-                                <img src={require('./image/home.png')} alt=""/>
-                                <p>首页</p>
-                            </div>
-                            <div className="item">
-                                <img src={require('./image/fenlei.png')} alt=""/>
-                                <p>分类</p>
-                            </div>
-                            <div className="item">
-                                <img src={require('./image/guidang.png')} alt=""/>
-                                <p>归档</p>
-                            </div>
-                            <div className="item">
-                                <img src={require('./image/serch.png')} alt=""/>
-                                <p>搜索</p>
-                            </div>
-                            <div className="item">
-                                <img src={require('./image/liuyan.png')} alt=""/>
-                                <p>留言</p>
-                            </div>
+                            <Link to='/index'>
+                                <div className="item">
+                                    <img src={require('./image/home.png')} alt=""/>
+                                    <p>首页</p>
+                                </div>
+                            </Link>
+                            <Link to="/cate">
+                                <div className="item">
+                                    <img src={require('./image/fenlei.png')} alt=""/>
+                                    <p>分类</p>
+                                </div>
+                            </Link>
+                            <Link to='/deal'>
+                                <div className="item">
+                                    <img src={require('./image/guidang.png')} alt=""/>
+                                    <p>归档</p>
+                                </div>
+                            </Link>
+                            <Link to='/search'>
+                                <div className="item">
+                                    <img src={require('./image/serch.png')} alt=""/>
+                                    <p>搜索</p>
+                                </div>
+                            </Link>
+                            <Link to='/faq'>
+                                <div className="item">
+                                    <img src={require('./image/liuyan.png')} alt=""/>
+                                    <p>留言</p>
+                                </div>
+                            </Link>
                             {/*<div className="item">*/}
-                                {/*<img src={require('./image/admin.png')} alt=""/>*/}
-                                {/*<p>管理</p>*/}
+                            {/*<img src={require('./image/admin.png')} alt=""/>*/}
+                            {/*<p>管理</p>*/}
                             {/*</div>*/}
                         </div>
                         <div className="extra">

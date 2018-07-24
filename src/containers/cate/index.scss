@@ -1,0 +1,28 @@
+
+.cate-box{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: 130px 40px 0;
+  .item{
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 15px;
+    width: calc(33.33% - 30px);
+    height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+    margin: 10px 15px;
+    position: relative;
+    letter-spacing: 1px;
+    p{
+      color: #eee;
+    }
+    >span{
+      font-size: 12px;
+      display: inline-block;
+      margin-top: 7px;
+      color: #bbb;
+    }
+  }
+}

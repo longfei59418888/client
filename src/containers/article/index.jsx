@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './index.scss';
 import {loading, autobind} from "../../decorators";
 import {observer} from 'mobx-react'
@@ -30,7 +30,7 @@ export default class Main extends React.Component {
                 <p className="info">
                     <span>发表于 : {getUTFDate(Article.article.createdAt).split(' ')[0]}</span> |
                     <span> 分类 : </span>
-                    <a href=""><span>{Article.article.classify.title}</span></a>
+                    <Link to={`/cate/${Article.article.classify.id}`}><span>{Article.article.classify.title}</span></Link>
                 </p>
                 <div className="content">
                     <div dangerouslySetInnerHTML={{__html: Article.article.content}}></div>

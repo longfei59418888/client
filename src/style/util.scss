@@ -1,2 +1,6 @@
 @import './common';
 @import "./reset";
+
+input,textarea,textarea:focus,input:focus{
+  outline:none;
+}

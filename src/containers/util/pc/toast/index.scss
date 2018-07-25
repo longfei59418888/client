@@ -17,19 +17,19 @@
       display: flex;
       border-radius: 10px;
       &.item-error{
-        background: rgba(242, 167, 161,.7);
+        background: #FDF2F0;
         border: 1px solid rgba(242, 167, 161,1);
       }
       &.item-success{
-        background: rgba(194, 233, 153,.7);
+        background: #F8FEEF;
         border: 1px solid rgba(194, 233, 153,1);
       }
       &.item-warn{
-        background: rgba(251, 229, 154,.7);
+        background: #FEFBE8;
         border: 1px solid rgba(251, 229, 154,1);
       }
       &.item-tips{
-        background: rgba(159, 212, 251,.7);
+        background: #E9F7FE;
         border: 1px solid rgba(159, 212, 251,1);
       }
       .icon{

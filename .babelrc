@@ -16,13 +16,6 @@
     "stage-0"
   ],
   "plugins": [
-    [
-      "import",
-      {
-        "libraryName": "zarm",
-        "style": false
-      }
-    ],
     "transform-async-to-generator",
     "transform-decorators-legacy",
     "transform-es2015-modules-commonjs",

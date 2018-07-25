@@ -10,17 +10,21 @@ class Models {
     @observable position = 0;
     @observable loading = false;
     @observable id = null;
+    @observable date = null;
+    @observable key = null;
 
     @observable article = {};
 
     @action
-    init(id) {
-        if(id == this.id) return 1;
+    init(id,date,key) {
+        if(id == this.id && date == this.date && key == this.key) return 1;
         runInAction(() => {
             this.id = id
             this.end = false
             this.list = null
             this.page = 0
+            this.date = date
+            this.key = key
             this.loading = false
             this.position = 0;
         })
@@ -37,10 +41,12 @@ class Models {
     }
 
     @action
-    async getList(classifyId) {
+    async getList() {
         this.loading = true
         let data = {page:this.page}
         if(this.id) data.classifyId = this.id
+        if(this.date) data.date = this.date
+        if(this.key) data.key = this.key
         let rst = await get(`api/article/list`, {
             data
         })

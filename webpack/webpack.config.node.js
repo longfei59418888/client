@@ -9,12 +9,13 @@ var port = config.PROD_PORT,
 
 
 var prodConfig = {
+    target: 'node',
+    devtool: false,
     entry: {
         app: './src/containers/index.js'
 
     },
     output: {
-        publicPath: '/public',
         filename: 'js/server.js',
         path: path.resolve(__dirname, "../dist/server"),
         libraryTarget: 'commonjs2'
@@ -73,24 +74,12 @@ var prodConfig = {
             }
         ]
     },
-    // output: {
-    //   path: path.join(__dirname, './dist'),
-    //   chunkFilename: '[name].js'
-    // },
     plugins: [ // 定义环境变量为开发环境
-        // new ExtractTextPlugin('css/[name].css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production'),
-            IS_DEVELOPMETN: false
+            'DEVELOPMETN_URL': JSON.stringify('http://127.0.0.1:8081/')
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'index.html',
-        //     template: 'src/index.html'
-        // }),
-        // // 提取css 根据入口文件，提取重复引用的公共代码类库，打包到单独文件中 new webpack   .optimize
-        // new webpack
-        //     .optimize
-        //     .CommonsChunkPlugin({async: true, minChunks: 3})
+
     ]
 };
 

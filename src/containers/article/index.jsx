@@ -28,7 +28,7 @@ export default class Main extends React.Component {
             <div ref='article' className='article'>
                 <p className="h5">{Article.article.title}</p>
                 <p className="info">
-                    <span>发表于 : {getUTFDate(Article.article.createdAt).split(' ')[0]}</span> |
+                    <span>发表于 : {getUTFDate(Article.article.publicDate).split(' ')[0]}</span> |
                     <span> 分类 : </span>
                     <Link to={`/cate/${Article.article.classify.id}`}><span>{Article.article.classify.title}</span></Link>
                 </p>

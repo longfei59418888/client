@@ -1,0 +1,81 @@
+
+.faq-box{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: 130px 40px 0;
+  .box{
+    width: 350px;
+    margin-left: 100px;
+  }
+  .code{
+    margin-top: 45px;
+    text-align: center;
+    p{
+      color: #eee;
+      font-size: 16px;
+    }
+    .er{
+      width: 250px;
+      margin: 20px auto;
+      img{width: 100%;}
+    }
+  }
+}
+.info-liuyan{
+  .item{
+    display: flex;
+    margin-top: 30px;
+    span{
+      width: 80px;
+      text-align: right;
+      padding-right: 10px;
+      font-size: 16px;
+      color: #aaa;
+      line-height: 25px;
+      display: inline-block;
+      height: 25px;
+    }
+    .check{
+      width: 80px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 14px;
+      color: #ccc;
+      justify-content: flex-end;
+    }
+    p{
+      flex: 1;
+      input{
+        width: 100%;
+        background: rgba(255,255,255,.9);
+        height: 25px;
+        border: none;
+        border-radius: 2px;
+        padding-left: 5px;
+      }
+      textarea{
+        width: 100%;
+        height: 100px;
+        margin-right: 5px;
+        border: none;
+        padding: 5px;
+        border-radius: 2px;
+        background: rgba(255,255,255,.9);
+      }
+    }
+  }
+  .btn{
+    margin-top: 10px;
+    font-size: 14px;
+    width: 80px;
+    background: #eee;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #666;
+    margin-left: 90px;
+    cursor: pointer;
+  }
+}

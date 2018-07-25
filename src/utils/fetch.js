@@ -1,5 +1,4 @@
-import SESSION from './session'
-import promise from 'es6-promise'
+
 import fetch from 'isomorphic-fetch';
 import {error, warn} from 'src/containers/util/pc/toast'
 

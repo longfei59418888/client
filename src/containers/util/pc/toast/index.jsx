@@ -24,23 +24,31 @@ export const close = () => {
     modalContainer = null
 }
 
-
+/*
+* title
+* msg
+* */
 export const error = (options) => {
+    if(typeof options == 'string') options = {msg:options}
     options.state = 0
     toast(options)
 }
 export const success = (options) => {
+    if(typeof options == 'string') options = {msg:options}
     options.state = 1
     toast(options)
 }
 export const tips = (options) => {
+    if(typeof options == 'string') options = {msg:options}
     options.state = 3
     toast(options)
 }
 export const warn = (options) => {
+    if(typeof options == 'string') options = {msg:options}
     options.state = 2
     toast(options)
 }
+
 function toast(options) {
     if (dispatch) {
         dispatch(options)
@@ -69,9 +77,9 @@ class ComContainer extends React.Component {
                 msgs: msgs
             })
         }
-        this.loop = setInterval(()=>{
+        this.loop = setInterval(() => {
             msgs = this.state.msgs
-            if(msgs.length == 1){
+            if (msgs.length == 1) {
                 clearInterval(this.loop)
                 close();
                 return
@@ -80,7 +88,7 @@ class ComContainer extends React.Component {
             this.setState({
                 msgs: msgs
             })
-        },2000)
+        }, 2000)
     }
 
     render() {
@@ -90,9 +98,9 @@ class ComContainer extends React.Component {
                 transitionName="example-toast"
                 transitionEnterTimeout={200}
                 transitionLeaveTimeout={300}>
-                {list.map((item,index)=>{
-                    let color, img ;
-                    switch (item.state){
+                {list.map((item, index) => {
+                    let color, img;
+                    switch (item.state) {
                         case 0:
                             color = 'item-error';
                             img = require('./images/cha.png');
@@ -110,12 +118,12 @@ class ComContainer extends React.Component {
                             img = require('./images/tips.png');
                             break;
                     }
-                    return (<div key={index} className={classnames('item',color)}>
+                    return (<div key={index} className={classnames('item', color)}>
                         <div className="icon">
                             <img src={img} alt=""/>
                         </div>
                         <div className="info">
-                            {item.title?<h4>{item.title}</h4>:''}
+                            {item.title ? <h4>{item.title}</h4> : ''}
                             <p>{item.msg}</p>
                         </div>
                     </div>)

@@ -1,4 +1,5 @@
 var config = require('./config')
+var path = require('path')
 var port = config.DEV_PORT,
     localIp = config.DEV_IP,
     HtmlWebpackPlugin = require("html-webpack-plugin"),

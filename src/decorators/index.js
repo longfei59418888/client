@@ -29,13 +29,10 @@ export function loading(promise, Loading = "") {
                 super()
             }
             state={
-                loading:false,
+                loading:true,
                 load:[]
             }
-            componentWillMount(){
-                this.setState({
-                    loading: true
-                })
+            componentDidMount(){
                 if (promise) promise(this.props, this.state).then((modules) => {
                     let asyncComponent = []
                     if(modules){

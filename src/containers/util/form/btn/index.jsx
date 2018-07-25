@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM,{render} from 'react-dom';
-import style from './index.scss'
+import style from './index.module.scss'
 
 class Btn extends React.Component{
     constructor(){
@@ -14,7 +13,9 @@ class Btn extends React.Component{
         },300)
     }
     render(){
-        return (<p onClick={this.click}></p>)
+        return (<p className={style['btn']} onClick={this.click}>
+            {this.props.children}
+        </p>)
     }
 }
 export default Btn

@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config ./webpack/webpack.config.dev.js",
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server  --config ./webpack/webpack.config.dev.js",
     "build": "webpack --config ./webpack/webpack.config.prod.js",
-    "node": "webpack --config ./webpack/webpack.config.node.js",
+    "node": "cross-env NODE_ENV=production  webpack --config  ./webpack/webpack.config.node.js",
     "server": "node server.js"
   },
   "author": "Focus Wong",
@@ -57,7 +57,9 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
+    "asset-require-hook": "^1.2.0",
     "core-decorators": "^0.20.0",
+    "css-modules-require-hook": "^4.2.3",
     "express": "^4.16.3",
     "isomorphic-style-loader": "^4.0.0",
     "mobx": "^5.0.3",

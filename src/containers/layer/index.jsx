@@ -1,6 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import './index.scss';
+import INFO from 'src/store/index'
+import {loading} from "../../decorators";
+import {observer} from 'mobx-react'
+
+
 export default class Main extends React.Component {
 
     render() {
@@ -53,20 +58,7 @@ export default class Main extends React.Component {
                                 <img src={require('./image/head.jpg')} alt=""/>
                             </div>
                             <p className='name'>XiaoLong,Wang</p>
-                            <div className="info">
-                                <div className="item">
-                                    <p>30</p>
-                                    <span>日志</span>
-                                </div>
-                                <div className="item">
-                                    <p>17</p>
-                                    <span>分类</span>
-                                </div>
-                                <div className="item">
-                                    <p>30</p>
-                                    <span>留言</span>
-                                </div>
-                            </div>
+                            <Info/>
                             <div className="link">
                                 <div className="h">
                                     <img src={require('./image/wangl.png')} alt=""/>
@@ -90,7 +82,32 @@ export default class Main extends React.Component {
     }
 }
 
-
+@loading(async (props,state)=>{
+    await INFO.getInfo()
+    return []
+})
+@observer
+class Info extends React.Component{
+    render(){
+        let {classify,article,faq} = INFO.info;
+        return(
+            <div className="info">
+                <div className="item">
+                    <p>{article}</p>
+                    <span>日志</span>
+                </div>
+                <div className="item">
+                    <p>{classify}</p>
+                    <span>分类</span>
+                </div>
+                <div className="item">
+                    <p>{faq}</p>
+                    <span>留言</span>
+                </div>
+            </div>
+        )
+    }
+}
 
 
 

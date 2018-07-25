@@ -8,7 +8,9 @@ import {getUTFDate} from 'src/utils/extend'
 
 @loading(async (props, state) => {
     let id = props.match.params.id ? props.match.params.id : null
-    await Article.init(id)
+    let date = props.match.params.date ? props.match.params.date : null
+    let key = props.match.params.key ? props.match.params.key : null
+    await Article.init(id,date,key)
     if (Article.list == null) {
         await Article.getList()
     }
@@ -48,13 +50,14 @@ export default class Main extends React.Component {
         return (
             <div ref='boxList' className='home'>
                 <div ref='scroll' className="scroll">
+                    <div></div>
                     <div>
                         {Article.list.map((item, index) => {
                             return (
                                 <div className="item">
                                     <p className="h5">{item.title}</p>
                                     <p className="info">
-                                        <span>发表于 : {getUTFDate(item.createdAt).split(' ')[0]}</span> |
+                                        <span>发表于 : {getUTFDate(item.publicDate).split(' ')[0]}</span> |
                                         <span> 分类 : </span>
                                         <Link to={`/cate/${item.classify.id}`}><span>{item.classify.title}</span></Link>
                                     </p>

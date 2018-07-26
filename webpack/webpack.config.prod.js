@@ -14,7 +14,7 @@ var prodConfig = {
 
     },
     output: {
-        publicPath: '',
+        // publicPath: '',
         filename: 'js/[name][chunkhash:8].js',
         chunkFilename: 'js/[name][chunkhash:8].js',
         path: path.resolve(__dirname, "../dist/client")

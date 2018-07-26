@@ -16,8 +16,8 @@ var prodConfig = {
 
     },
     output: {
-        filename: 'js/server.js',
-        path: path.resolve(__dirname, "../dist/server"),
+        filename: 'server.js',
+        path: path.resolve(__dirname, "../dist/client"),
         libraryTarget: 'commonjs2'
     },
     module: {

@@ -1,6 +1,7 @@
-webpackJsonp([5],{
+exports.ids = [4];
+exports.modules = {
 
-/***/ 190:
+/***/ 281:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _regenerator = __webpack_require__(10);
+var _regenerator = __webpack_require__(11);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
@@ -25,19 +26,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(11);
+var _reactRouterDom = __webpack_require__(32);
 
-__webpack_require__(198);
+__webpack_require__(289);
 
-var _decorators = __webpack_require__(30);
+var _decorators = __webpack_require__(51);
 
-var _mobxReact = __webpack_require__(31);
+var _mobxReact = __webpack_require__(52);
 
-var _article = __webpack_require__(67);
+var _article = __webpack_require__(104);
 
 var _article2 = _interopRequireDefault(_article);
 
-var _extend = __webpack_require__(68);
+var _extend = __webpack_require__(105);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -97,6 +98,7 @@ var Main = (_dec = (0, _decorators.loading)(function () {
     }, {
         key: 'render',
         value: function render() {
+
             if (!_article2.default.article) {
                 return _ref2;
             }
@@ -145,42 +147,46 @@ exports.default = Main;
 
 /***/ }),
 
-/***/ 198:
+/***/ 289:
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
 
-// load the styles
-var content = __webpack_require__(199);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
+    var content = __webpack_require__(290);
+    var insertCss = __webpack_require__(20);
 
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(189)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--4-2!../../../node_modules/postcss-loader/lib/index.js??ref--4-3!../../../node_modules/sass-loader/lib/loader.js!./index.scss", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js??ref--4-2!../../../node_modules/postcss-loader/lib/index.js??ref--4-3!../../../node_modules/sass-loader/lib/loader.js!./index.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
+    if (typeof content === 'string') {
+      content = [[module.i, content, '']];
+    }
+
+    module.exports = content.locals || {};
+    module.exports._getContent = function() { return content; };
+    module.exports._getCss = function() { return content.toString(); };
+    module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+    // Hot Module Replacement
+    // https://webpack.github.io/docs/hot-module-replacement
+    // Only activated in browser context
+    if (false) {
+      var removeCss = function() {};
+      module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--4-1!../../../node_modules/sass-loader/lib/loader.js!./index.scss", function() {
+        content = require("!!../../../node_modules/css-loader/index.js??ref--4-1!../../../node_modules/sass-loader/lib/loader.js!./index.scss");
+
+        if (typeof content === 'string') {
+          content = [[module.id, content, '']];
+        }
+
+        removeCss = insertCss(content, { replace: true });
+      });
+      module.hot.dispose(function() { removeCss(); });
+    }
+  
 
 /***/ }),
 
-/***/ 199:
+/***/ 290:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(188)(undefined);
+exports = module.exports = __webpack_require__(19)(undefined);
 // imports
 
 
@@ -192,4 +198,4 @@ exports.push([module.i, ".article {\n  padding: 70px 30px;\n  color: #ddd; }\n  
 
 /***/ })
 
-});
+};;

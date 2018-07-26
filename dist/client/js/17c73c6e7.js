@@ -600,79 +600,44 @@ exports.default = Main;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+// import React from 'react';
+// import style from './index.module.scss'
+//
+// class Btn extends React.Component{
+//     constructor(){
+//         super();
+//         this.loop = null;
+//     }
+//     click=()=>{
+//         clearTimeout(this.loop)
+//         this.loop = setTimeout(()=>{
+//             this.props.onClick()
+//         },300)
+//     }
+//     render(){
+//         return (<p className={style['btn']} onClick={this.click}>
+//             {this.props.children}
+//         </p>)
+//     }
+// }
+// export default Btn
 
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _indexModule = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./index.module.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-var _indexModule2 = _interopRequireDefault(_indexModule);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Btn = function (_React$Component) {
-    _inherits(Btn, _React$Component);
-
-    function Btn() {
-        _classCallCheck(this, Btn);
-
-        var _this = _possibleConstructorReturn(this, (Btn.__proto__ || Object.getPrototypeOf(Btn)).call(this));
-
-        _this.click = function () {
-            clearTimeout(_this.loop);
-            _this.loop = setTimeout(function () {
-                _this.props.onClick();
-            }, 300);
-        };
-
-        _this.loop = null;
-        return _this;
+;(function register() {
+  /* react-hot-loader/webpack */if (false) {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+      return;
+    } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
+      __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/util/form/btn/index.jsx");return;
+    } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
+      /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
+        continue;
+      }var namedExport = void 0;try {
+        namedExport = webpackExports[key];
+      } catch (err) {
+        continue;
+      }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/util/form/btn/index.jsx");
     }
-
-    _createClass(Btn, [{
-        key: 'render',
-        value: function render() {
-            return _jsx('p', {
-                className: _indexModule2.default['btn'],
-                onClick: this.click
-            }, void 0, this.props.children);
-        }
-    }]);
-
-    return Btn;
-}(_react2.default.Component);
-
-exports.default = Btn;
-(function register() {
-    /* react-hot-loader/webpack */if (false) {
-        if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-            return;
-        } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/util/form/btn/index.jsx");return;
-        } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
-            /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
-                continue;
-            }var namedExport = void 0;try {
-                namedExport = webpackExports[key];
-            } catch (err) {
-                continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/util/form/btn/index.jsx");
-        }
-    }
+  }
 })();
 
 /***/ }),

@@ -21,6 +21,7 @@ export default class Main extends React.Component {
         })
     }
     render() {
+
         if (!Article.article) {
             return <div>当前文档不存在</div>
         }

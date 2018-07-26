@@ -4,7 +4,7 @@ import React from "react";
 import {renderToString} from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
 
-import Layout from "../dist/server/js/server";
+import Layout from "../dist/client/server";
 // import Layout from "../src/containers/index";
 
 const app = express();

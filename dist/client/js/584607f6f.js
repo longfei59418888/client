@@ -25,7 +25,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(11);
+var _reactRouterDom = __webpack_require__(12);
 
 __webpack_require__(198);
 
@@ -97,6 +97,7 @@ var Main = (_dec = (0, _decorators.loading)(function () {
     }, {
         key: 'render',
         value: function render() {
+
             if (!_article2.default.article) {
                 return _ref2;
             }

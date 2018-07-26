@@ -82,7 +82,7 @@ var devConfig = {
         proxy: {}
     },
     plugins: [
-
+        new HtmlWebpackPlugin({template: "./src/index.html"}),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({

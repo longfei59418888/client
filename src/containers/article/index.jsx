@@ -3,30 +3,42 @@ import { Link } from 'react-router-dom'
 import './index.scss';
 import {loading, autobind} from "../../decorators";
 import {observer} from 'mobx-react'
+import {action} from 'mobx';
 import Article from 'src/store/article'
 import {getUTFDate} from 'src/utils/extend'
 
 
-@loading(async (props, state) => {
-    let id = props.match.params.id
-    await Article.getArticle(id)
-    return []
-})
+// @loading(async (props, state) => {
+//     let id = props.match.params.id
+//     await Article.getArticle(id)
+//     return []
+// })
 @observer
 export default class Main extends React.Component {
-
-    componentDidMount() {
-        this.refs['article'].querySelectorAll('pre code').forEach(item=>{
-            hljs.highlightBlock(item);
-        })
+    @action
+    static async onEnter({states, pathname, query, params}){
+        // console.log({states, pathname, query, params})
+        // await Article.getArticle(params.id)
+    }
+    async componentWillMount(){
+        let id = this.props.match.params.id
+        await Article.getArticle(id)
+    }
+    componentDidUpdate() {
+        if(this.refs['article']){
+            this.refs['article'].querySelectorAll('pre code').forEach(item=>{
+                hljs.highlightBlock(item);
+            })
+        }
     }
     render() {
 
-        if (!Article.article) {
-            return <div>当前文档不存在</div>
+        if (!Article.article.publicDate) {
+            return <div></div>
         }
         return (
             <div ref='article' className='article'>
+                <kbd>{Article.article.classify.title},{Article.article.title}</kbd>
                 <p className="h5">{Article.article.title}</p>
                 <p className="info">
                     <span>发表于 : {getUTFDate(Article.article.publicDate).split(' ')[0]}</span> |

@@ -124,7 +124,7 @@ export function setTitle(title) {
 }
 
 // 设置文档的标题 html标题
-function _setTitle(title) {
+export function _setTitle(title) {
     document.title = title;
     let iframe = document.createElement('iframe');
     iframe.src = '../favicon.ico';

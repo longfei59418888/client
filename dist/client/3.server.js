@@ -1,7 +1,7 @@
 exports.ids = [3];
 exports.modules = {
 
-/***/ 282:
+/***/ 283:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26,9 +26,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(32);
+var _reactRouterDom = __webpack_require__(31);
 
-__webpack_require__(291);
+__webpack_require__(293);
 
 var _decorators = __webpack_require__(51);
 
@@ -37,6 +37,12 @@ var _mobxReact = __webpack_require__(52);
 var _cate = __webpack_require__(286);
 
 var _cate2 = _interopRequireDefault(_cate);
+
+var _reactTransitionGroup = __webpack_require__(103);
+
+var _classnames = __webpack_require__(102);
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -48,6 +54,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
+// ES6
+
+var _ref2 = _jsx('br', {});
+
 var Main = (_dec = (0, _decorators.loading)(function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee(props, state) {
         return _regenerator2.default.wrap(function _callee$(_context) {
@@ -55,7 +65,7 @@ var Main = (_dec = (0, _decorators.loading)(function () {
                 switch (_context.prev = _context.next) {
                     case 0:
                         _context.next = 2;
-                        return _cate2.default.getList();
+                        return _cate2.default.getTimeList();
 
                     case 2:
                         return _context.abrupt('return', []);
@@ -81,17 +91,28 @@ var Main = (_dec = (0, _decorators.loading)(function () {
     }
 
     _createClass(Main, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var deal = this.refs['deal'];
+        }
+    }, {
         key: 'render',
         value: function render() {
-            return _jsx('div', {
-                className: 'cate-box'
-            }, void 0, _cate2.default.list.map(function (item, index) {
-                return _jsx(_reactRouterDom.Link, {
-                    to: '/cate/' + item.id
-                }, void 0, _jsx('div', {
-                    className: 'item'
-                }, void 0, _jsx('p', {}, void 0, _jsx('span', {}, void 0, index + 1), '.', item.title), _jsx('span', {}, void 0, item.description)));
-            }));
+            return _react2.default.createElement(
+                'div',
+                { ref: 'deal', className: 'deal-box' },
+                _jsx(_reactTransitionGroup.CSSTransitionGroup, {
+                    transitionName: 'example-toast-enter',
+                    transitionEnterTimeout: 1000,
+                    transitionLeaveTimeout: 300
+                }, void 0, _cate2.default.timeList.map(function (item) {
+                    return _jsx('div', {
+                        className: 'item'
+                    }, void 0, _jsx(_reactRouterDom.Link, {
+                        to: '/time/' + item.time
+                    }, void 0, _jsx('p', {}, void 0, item.time, _ref2, _jsx('span', {}, void 0, '\u5171\u8BA1', item.count, '\u7BC7'))));
+                }))
+            );
         }
     }]);
 
@@ -105,7 +126,7 @@ exports.default = Main;
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/cate/index.jsx");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/deal/index.jsx");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -113,7 +134,7 @@ exports.default = Main;
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/cate/index.jsx");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/deal/index.jsx");
         }
     }
 })();
@@ -138,7 +159,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _desc, _value, _class, _descriptor, _descriptor2;
 
-var _mobx = __webpack_require__(31);
+var _mobx = __webpack_require__(20);
 
 var _fetch = __webpack_require__(53);
 
@@ -330,12 +351,12 @@ exports.default = Model;
 
 /***/ }),
 
-/***/ 291:
+/***/ 293:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    var content = __webpack_require__(292);
-    var insertCss = __webpack_require__(20);
+    var content = __webpack_require__(294);
+    var insertCss = __webpack_require__(19);
 
     if (typeof content === 'string') {
       content = [[module.i, content, '']];
@@ -366,15 +387,15 @@ exports.default = Model;
 
 /***/ }),
 
-/***/ 292:
+/***/ 294:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)(undefined);
+exports = module.exports = __webpack_require__(18)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, ".cate-box {\n  position: relative;\n  height: 100%;\n  overflow: hidden;\n  padding: 130px 40px 0; }\n  .cate-box .item {\n    background: rgba(255, 255, 255, 0.3);\n    padding: 10px 15px;\n    width: calc(33.33% - 30px);\n    height: 60px;\n    border-radius: 5px;\n    cursor: pointer;\n    float: left;\n    margin: 10px 15px;\n    position: relative;\n    letter-spacing: 1px; }\n    .cate-box .item p {\n      color: #eee; }\n    .cate-box .item > span {\n      font-size: 12px;\n      display: inline-block;\n      margin-top: 7px;\n      color: #bbb; }\n", ""]);
+exports.push([module.i, ".deal-box {\n  position: relative;\n  height: 100%;\n  overflow: hidden;\n  padding: 130px 40px 0; }\n  .deal-box a {\n    color: #bbb; }\n  .deal-box .item {\n    border-radius: 100%;\n    cursor: pointer;\n    letter-spacing: 1px;\n    display: flex;\n    float: left;\n    margin: 30px;\n    justify-content: center;\n    align-items: center; }\n    .deal-box .item:hover {\n      opacity: .8; }\n    .deal-box .item:nth-child(1) {\n      background: rgba(255, 255, 255, 0.25);\n      height: 180px;\n      width: 180px;\n      top: 24%;\n      left: 14%; }\n    .deal-box .item:nth-child(2) {\n      background: rgba(132, 217, 68, 0.25);\n      height: 100px;\n      width: 100px;\n      top: 42%;\n      left: 30%; }\n    .deal-box .item:nth-child(3) {\n      background: rgba(221, 79, 67, 0.25);\n      height: 150px;\n      width: 150px;\n      top: 45%;\n      left: 54%; }\n    .deal-box .item:nth-child(4) {\n      background: rgba(120, 177, 249, 0.25);\n      height: 200px;\n      width: 200px;\n      top: 20%;\n      left: 54%; }\n    .deal-box .item p {\n      color: #eee;\n      font-size: 25px;\n      text-align: center; }\n      .deal-box .item p > span {\n        text-align: center;\n        font-size: 12px;\n        display: inline-block;\n        margin-top: 7px;\n        color: #bbb; }\n\n.example-toast-enter {\n  opacity: 0;\n  transform: translateY(-50px); }\n\n.example-toast-enter.example-toast-enter-active {\n  transform: translateY(0);\n  opacity: 1;\n  transition: all 200ms ease; }\n", ""]);
 
 // exports
 

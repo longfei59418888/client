@@ -79,7 +79,9 @@ async function fetchData(url, options) {
 
 function dealRst(resData, opts) {
     let {status, msg, data = {}} = resData;
-    console.log(`----${opts.url}---`, resData, opts)
+    if(process.env.NODE_ENV == 'dev'){
+        console.log(`----${opts.url}---`, resData, opts.data)
+    }
     if (status != 1) {
         error({msg})
         if (status == 0) {

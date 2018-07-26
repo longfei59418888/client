@@ -215,50 +215,33 @@ canvas {
   opacity: 1;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease; }
-.home {
-  position: relative;
-  height: 100%;
-  overflow: auto; }
-  .home .scroll {
-    padding: 70px 40px 0; }
-    .home .scroll .item {
-      color: #ddd;
-      margin-bottom: 90px; }
-      .home .scroll .item .h5 {
-        text-align: center;
-        font-size: 26px;
-        letter-spacing: 1px; }
-      .home .scroll .item .info {
-        font-size: 12px;
-        color: #aaa;
-        letter-spacing: 1px;
-        text-align: center;
-        line-height: 40px; }
-        .home .scroll .item .info a {
-          color: #aaa; }
-      .home .scroll .item .descript {
-        line-height: 1.5;
-        margin: 30px 0; }
-      .home .scroll .item .btn {
-        padding: 30px 0 50px;
-        text-align: center; }
-        .home .scroll .item .btn a {
-          color: #666;
-          padding: 7px 14px;
-          background: #fff;
-          border-radius: 2px; }
-          .home .scroll .item .btn a:hover {
-            opacity: .9; }
-      .home .scroll .item hr {
-        width: 50px;
-        opacity: .2;
-        margin: 30px auto; }
-    .home .scroll .loading {
-      line-height: 60px;
-      color: #aaa;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-align: center; }
+.article {
+  padding: 70px 30px;
+  color: #ddd; }
+  .article .h5 {
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 1px; }
+  .article .info {
+    font-size: 12px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 40px; }
+    .article .info a {
+      color: #aaa; }
+  .article .content {
+    margin-top: 30px; }
+    .article .content p {
+      line-height: 1.5; }
+    .article .content pre {
+      border-radius: 2px;
+      overflow: hidden; }
+      .article .content pre code {
+        padding-top: 0;
+        padding-bottom: 15px;
+        line-height: 1.3;
+        font-size: 14px; }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -613,3 +596,6 @@ body, button {
 
 input, textarea, textarea:focus, input:focus {
   outline: none; }
+
+kbd {
+  display: none; }

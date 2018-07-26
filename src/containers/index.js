@@ -4,7 +4,7 @@ import LazyRoute from "lazy-route";
 import style from './index.scss'
 import dot from './lib/dot'
 import Layer  from './layer'
-import home from './home'
+import Article from './article'
 class Home extends React.Component {
     componentDidMount() {
         dot(this.refs['canvas'], {})
@@ -14,8 +14,9 @@ class Home extends React.Component {
             <Layer>
                 <Route path='/index'
                        render={props => (<LazyRoute {...props} component={import('./home')}/>)}/>
-                <Route  path='/article/:id'
-                        render={props => (<LazyRoute {...props} component={import ('./article')}/>)}/>
+                <Route  path='/article/:id' component={Article}
+                        // render={props => (<LazyRoute {...props} component={import ('./article')}/>)}
+                />
                 <Route exact  path='/cate'
                         render={props => (<LazyRoute {...props} component={import ('./cate')}/>)}/>
                 <Route exact path='/cate/:id'

@@ -1,7 +1,7 @@
 exports.ids = [4];
 exports.modules = {
 
-/***/ 281:
+/***/ 282:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26,19 +26,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(32);
+var _reactRouterDom = __webpack_require__(31);
 
-__webpack_require__(289);
+__webpack_require__(291);
 
 var _decorators = __webpack_require__(51);
 
 var _mobxReact = __webpack_require__(52);
 
-var _article = __webpack_require__(104);
+var _cate = __webpack_require__(286);
 
-var _article2 = _interopRequireDefault(_article);
-
-var _extend = __webpack_require__(105);
+var _cate2 = _interopRequireDefault(_cate);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -50,25 +48,19 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var _ref2 = _jsx('div', {}, void 0, '\u5F53\u524D\u6587\u6863\u4E0D\u5B58\u5728');
-
-var _ref3 = _jsx('span', {}, void 0, ' \u5206\u7C7B : ');
-
 var Main = (_dec = (0, _decorators.loading)(function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee(props, state) {
-        var id;
         return _regenerator2.default.wrap(function _callee$(_context) {
             while (1) {
                 switch (_context.prev = _context.next) {
                     case 0:
-                        id = props.match.params.id;
-                        _context.next = 3;
-                        return _article2.default.getArticle(id);
+                        _context.next = 2;
+                        return _cate2.default.getList();
 
-                    case 3:
+                    case 2:
                         return _context.abrupt('return', []);
 
-                    case 4:
+                    case 3:
                     case 'end':
                         return _context.stop();
                 }
@@ -89,36 +81,17 @@ var Main = (_dec = (0, _decorators.loading)(function () {
     }
 
     _createClass(Main, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            this.refs['article'].querySelectorAll('pre code').forEach(function (item) {
-                hljs.highlightBlock(item);
-            });
-        }
-    }, {
         key: 'render',
         value: function render() {
-
-            if (!_article2.default.article) {
-                return _ref2;
-            }
-            return _react2.default.createElement(
-                'div',
-                { ref: 'article', className: 'article' },
-                _jsx('p', {
-                    className: 'h5'
-                }, void 0, _article2.default.article.title),
-                _jsx('p', {
-                    className: 'info'
-                }, void 0, _jsx('span', {}, void 0, '\u53D1\u8868\u4E8E : ', (0, _extend.getUTFDate)(_article2.default.article.publicDate).split(' ')[0]), ' |', _ref3, _jsx(_reactRouterDom.Link, {
-                    to: '/cate/' + _article2.default.article.classify.id
-                }, void 0, _jsx('span', {}, void 0, _article2.default.article.classify.title))),
-                _jsx('div', {
-                    className: 'content'
+            return _jsx('div', {
+                className: 'cate-box'
+            }, void 0, _cate2.default.list.map(function (item, index) {
+                return _jsx(_reactRouterDom.Link, {
+                    to: '/cate/' + item.id
                 }, void 0, _jsx('div', {
-                    dangerouslySetInnerHTML: { __html: _article2.default.article.content }
-                }))
-            );
+                    className: 'item'
+                }, void 0, _jsx('p', {}, void 0, _jsx('span', {}, void 0, index + 1), '.', item.title), _jsx('span', {}, void 0, item.description)));
+            }));
         }
     }]);
 
@@ -132,7 +105,7 @@ exports.default = Main;
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/article/index.jsx");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/cate/index.jsx");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -140,19 +113,229 @@ exports.default = Main;
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/article/index.jsx");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/cate/index.jsx");
         }
     }
 })();
 
 /***/ }),
 
-/***/ 289:
+/***/ 286:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _regenerator = __webpack_require__(11);
+
+var _regenerator2 = _interopRequireDefault(_regenerator);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _desc, _value, _class, _descriptor, _descriptor2;
+
+var _mobx = __webpack_require__(20);
+
+var _fetch = __webpack_require__(53);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+function _initDefineProp(target, property, descriptor, context) {
+    if (!descriptor) return;
+    Object.defineProperty(target, property, {
+        enumerable: descriptor.enumerable,
+        configurable: descriptor.configurable,
+        writable: descriptor.writable,
+        value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
+    });
+}
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
+    var desc = {};
+    Object['ke' + 'ys'](descriptor).forEach(function (key) {
+        desc[key] = descriptor[key];
+    });
+    desc.enumerable = !!desc.enumerable;
+    desc.configurable = !!desc.configurable;
+
+    if ('value' in desc || desc.initializer) {
+        desc.writable = true;
+    }
+
+    desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+        return decorator(target, property, desc) || desc;
+    }, desc);
+
+    if (context && desc.initializer !== void 0) {
+        desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+        desc.initializer = undefined;
+    }
+
+    if (desc.initializer === void 0) {
+        Object['define' + 'Property'](target, property, desc);
+        desc = null;
+    }
+
+    return desc;
+}
+
+function _initializerWarningHelper(descriptor, context) {
+    throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
+}
+
+var Models = (_class = function () {
+    function Models() {
+        _classCallCheck(this, Models);
+
+        _initDefineProp(this, 'list', _descriptor, this);
+
+        _initDefineProp(this, 'timeList', _descriptor2, this);
+    }
+
+    _createClass(Models, [{
+        key: 'getList',
+        value: function () {
+            var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+                var rst;
+                return _regenerator2.default.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                _context.next = 2;
+                                return (0, _fetch.get)('api/classify/list', {});
+
+                            case 2:
+                                rst = _context.sent;
+
+                                if (!rst) {
+                                    _context.next = 6;
+                                    break;
+                                }
+
+                                this.list = rst.rows;
+                                return _context.abrupt('return', 1);
+
+                            case 6:
+                                return _context.abrupt('return', 0);
+
+                            case 7:
+                            case 'end':
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, this);
+            }));
+
+            function getList() {
+                return _ref.apply(this, arguments);
+            }
+
+            return getList;
+        }()
+    }, {
+        key: 'getTimeList',
+        value: function () {
+            var _ref2 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee2() {
+                var rst, list, arr, target;
+                return _regenerator2.default.wrap(function _callee2$(_context2) {
+                    while (1) {
+                        switch (_context2.prev = _context2.next) {
+                            case 0:
+                                _context2.next = 2;
+                                return (0, _fetch.get)('api/classify/year', {});
+
+                            case 2:
+                                rst = _context2.sent;
+
+                                if (!rst) {
+                                    _context2.next = 13;
+                                    break;
+                                }
+
+                                list = {}, arr = [], target = [];
+
+                                rst.forEach(function (item) {
+                                    if (list.length < 1) list.push(item);
+                                    list[item.count] = item;
+                                    arr.push(item.count);
+                                });
+                                arr = arr.sort().reverse();
+                                target.push(list[arr[1]]);
+                                target.push(list[arr[3]]);
+                                target.push(list[arr[2]]);
+                                target.push(list[arr[0]]);
+                                this.timeList = target;
+                                return _context2.abrupt('return', 1);
+
+                            case 13:
+                                return _context2.abrupt('return', 0);
+
+                            case 14:
+                            case 'end':
+                                return _context2.stop();
+                        }
+                    }
+                }, _callee2, this);
+            }));
+
+            function getTimeList() {
+                return _ref2.apply(this, arguments);
+            }
+
+            return getTimeList;
+        }()
+    }]);
+
+    return Models;
+}(), (_descriptor = _applyDecoratedDescriptor(_class.prototype, 'list', [_mobx.observable], {
+    enumerable: true,
+    initializer: function initializer() {
+        return null;
+    }
+}), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, 'timeList', [_mobx.observable], {
+    enumerable: true,
+    initializer: function initializer() {
+        return null;
+    }
+}), _applyDecoratedDescriptor(_class.prototype, 'getList', [_mobx.action], Object.getOwnPropertyDescriptor(_class.prototype, 'getList'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'getTimeList', [_mobx.action], Object.getOwnPropertyDescriptor(_class.prototype, 'getTimeList'), _class.prototype)), _class);
+
+
+var Model = new Models();
+exports.default = Model;
+(function register() {
+    /* react-hot-loader/webpack */if (false) {
+        if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+            return;
+        } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/store/cate.js");return;
+        } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
+            /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
+                continue;
+            }var namedExport = void 0;try {
+                namedExport = webpackExports[key];
+            } catch (err) {
+                continue;
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/store/cate.js");
+        }
+    }
+})();
+
+/***/ }),
+
+/***/ 291:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    var content = __webpack_require__(290);
-    var insertCss = __webpack_require__(20);
+    var content = __webpack_require__(292);
+    var insertCss = __webpack_require__(19);
 
     if (typeof content === 'string') {
       content = [[module.i, content, '']];
@@ -183,15 +366,15 @@ exports.default = Main;
 
 /***/ }),
 
-/***/ 290:
+/***/ 292:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)(undefined);
+exports = module.exports = __webpack_require__(18)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, ".article {\n  padding: 70px 30px;\n  color: #ddd; }\n  .article .h5 {\n    text-align: center;\n    font-size: 26px;\n    letter-spacing: 1px; }\n  .article .info {\n    font-size: 12px;\n    color: #aaa;\n    letter-spacing: 1px;\n    text-align: center;\n    line-height: 40px; }\n    .article .info a {\n      color: #aaa; }\n  .article .content {\n    margin-top: 30px; }\n    .article .content p {\n      line-height: 1.5; }\n    .article .content pre {\n      border-radius: 2px;\n      overflow: hidden; }\n      .article .content pre code {\n        padding-top: 0;\n        padding-bottom: 15px;\n        line-height: 1.3;\n        font-size: 14px; }\n", ""]);
+exports.push([module.i, ".cate-box {\n  position: relative;\n  height: 100%;\n  overflow: hidden;\n  padding: 130px 40px 0; }\n  .cate-box .item {\n    background: rgba(255, 255, 255, 0.3);\n    padding: 10px 15px;\n    width: calc(33.33% - 30px);\n    height: 60px;\n    border-radius: 5px;\n    cursor: pointer;\n    float: left;\n    margin: 10px 15px;\n    position: relative;\n    letter-spacing: 1px; }\n    .cate-box .item p {\n      color: #eee; }\n    .cate-box .item > span {\n      font-size: 12px;\n      display: inline-block;\n      margin-top: 7px;\n      color: #bbb; }\n", ""]);
 
 // exports
 

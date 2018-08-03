@@ -6,7 +6,7 @@ var port = config.PROD_PORT,
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
     webpack = require("webpack"),
     path = require('path');
-var TestpLU
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 var prodConfig = {
     entry: {
@@ -113,7 +113,10 @@ var prodConfig = {
         // 提取css 根据入口文件，提取重复引用的公共代码类库，打包到单独文件中 new webpack   .optimize
         new webpack
             .optimize
-            .CommonsChunkPlugin({async: true, minChunks: 3})
+            .CommonsChunkPlugin({async: true, minChunks: 3}),
+        new CopyWebpackPlugin([
+            { from: 'public', to: 'public' },
+        ], {})
     ]
 };
 

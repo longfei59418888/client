@@ -58,6 +58,7 @@
   },
   "dependencies": {
     "asset-require-hook": "^1.2.0",
+    "copy-webpack-plugin": "^4.5.2",
     "core-decorators": "^0.20.0",
     "css-modules-require-hook": "^4.2.3",
     "express": "^4.16.3",

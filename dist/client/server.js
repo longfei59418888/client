@@ -8390,7 +8390,7 @@ var fetchData = function () {
                             url += options.body;
                             delete options.body;
                         }
-                        if (!/^https:\/\/|^http:\/\//.test(url)) url = "http://127.0.0.1:8081/" + url;
+                        if (!/^https:\/\/|^http:\/\//.test(url)) url = "http://localhost:8081/" + url;
                         opts = Object.assign({
                             loading: true,
                             data: {},
@@ -8560,7 +8560,7 @@ var uplaod = exports.uplaod = function () {
                 switch (_context5.prev = _context5.next) {
                     case 0:
                         _context5.next = 2;
-                        return (0, _isomorphicFetch2.default)("http://127.0.0.1:8081/" + url, {
+                        return (0, _isomorphicFetch2.default)("http://localhost:8081/" + url, {
                             method: 'POST',
                             credentials: 'include',
                             body: body

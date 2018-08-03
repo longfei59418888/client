@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + "" + {"0":"d619c9eb","1":"1fbb6c1a","2":"4ed06487","3":"580464bd","4":"4eeb7183","5":"12f883f1"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + "" + {"0":"fca41789","1":"af706d20","2":"068b831a","3":"2a1fb57c","4":"799f4663","5":"b9a2c756"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -864,6 +864,13 @@ module.exports = ReactElement;
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(128);
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -928,7 +935,7 @@ var createPath = exports.createPath = function createPath(location) {
 };
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -997,13 +1004,6 @@ var createPath = function createPath(location) {
 
   return path;
 };
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(128);
-
 
 /***/ }),
 /* 11 */
@@ -5356,7 +5356,7 @@ var matchPath = function matchPath(pathname) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(10);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -5615,7 +5615,7 @@ var _valueEqual = __webpack_require__(35);
 
 var _valueEqual2 = _interopRequireDefault(_valueEqual);
 
-var _PathUtils = __webpack_require__(8);
+var _PathUtils = __webpack_require__(9);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6332,7 +6332,7 @@ function mixin(objects) {
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/decorators/index.js");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/decorators/index.js");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -6340,7 +6340,7 @@ function mixin(objects) {
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/decorators/index.js");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/decorators/index.js");
         }
     }
 })();
@@ -7636,7 +7636,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.uplaod = exports.del = exports.put = exports.post = exports.get = undefined;
 
-var _regenerator = __webpack_require__(10);
+var _regenerator = __webpack_require__(8);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
@@ -7856,7 +7856,9 @@ function dealRst(resData, opts) {
         _resData$data = resData.data,
         data = _resData$data === undefined ? {} : _resData$data;
 
-    console.log('----' + opts.url + '---', resData, opts);
+    if (false) {
+        console.log('----' + opts.url + '---', resData, opts.data);
+    }
     if (status != 1) {
         (0, _toast.error)({ msg: msg });
         if (status == 0) {
@@ -7872,7 +7874,7 @@ function dealRst(resData, opts) {
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/utils/fetch.js");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/utils/fetch.js");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -7880,7 +7882,7 @@ function dealRst(resData, opts) {
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/utils/fetch.js");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/utils/fetch.js");
         }
     }
 })();
@@ -8553,7 +8555,7 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(15);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -10605,7 +10607,7 @@ var ComContainer = function (_React$Component) {
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/util/pc/toast/index.jsx");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/util/pc/toast/index.jsx");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -10613,7 +10615,7 @@ var ComContainer = function (_React$Component) {
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/util/pc/toast/index.jsx");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/util/pc/toast/index.jsx");
         }
     }
 })();
@@ -10706,7 +10708,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _regenerator = __webpack_require__(10);
+var _regenerator = __webpack_require__(8);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
@@ -10965,7 +10967,7 @@ exports.default = Model;
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/store/article.js");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/store/article.js");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -10973,7 +10975,7 @@ exports.default = Model;
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/store/article.js");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/store/article.js");
         }
     }
 })();
@@ -11472,7 +11474,7 @@ function _rotateImg(img, direction, canvas) {
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/utils/extend.js");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/utils/extend.js");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -11480,7 +11482,7 @@ function _rotateImg(img, direction, canvas) {
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/utils/extend.js");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/utils/extend.js");
         }
     }
 })();
@@ -11536,7 +11538,7 @@ if (false) {
 		if (typeof __REACT_HOT_LOADER__ === 'undefined') {
 			return;
 		} /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-			__REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/app.js");return;
+			__REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/app.js");return;
 		} /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
 			/* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
 				continue;
@@ -11544,7 +11546,7 @@ if (false) {
 				namedExport = webpackExports[key];
 			} catch (err) {
 				continue;
-			}__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/app.js");
+			}__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/app.js");
 		}
 	}
 })();
@@ -12329,7 +12331,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _LocationUtils = __webpack_require__(23);
 
-var _PathUtils = __webpack_require__(8);
+var _PathUtils = __webpack_require__(9);
 
 var _createTransitionManager = __webpack_require__(24);
 
@@ -12706,7 +12708,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _LocationUtils = __webpack_require__(23);
 
-var _PathUtils = __webpack_require__(8);
+var _PathUtils = __webpack_require__(9);
 
 var _createTransitionManager = __webpack_require__(24);
 
@@ -13043,7 +13045,7 @@ var _warning = __webpack_require__(1);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _PathUtils = __webpack_require__(8);
+var _PathUtils = __webpack_require__(9);
 
 var _LocationUtils = __webpack_require__(23);
 
@@ -13760,7 +13762,7 @@ module.exports = Array.isArray || function (arr) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(17);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(10);
 /* unused harmony reexport parsePath */
 /* unused harmony reexport createPath */
 
@@ -13783,7 +13785,7 @@ module.exports = Array.isArray || function (arr) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(42);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -14087,7 +14089,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(42);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -14405,7 +14407,7 @@ var createHashHistory = function createHashHistory() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(27);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -14837,7 +14839,7 @@ exports.default = Home;
               if (typeof __REACT_HOT_LOADER__ === 'undefined') {
                      return;
               } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-                     __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/index.js");return;
+                     __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/index.js");return;
               } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
                      /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                             continue;
@@ -14845,7 +14847,7 @@ exports.default = Home;
                             namedExport = webpackExports[key];
                      } catch (err) {
                             continue;
-                     }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/index.js");
+                     }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/index.js");
               }
        }
 })();
@@ -18011,7 +18013,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/lib/dot.js");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/lib/dot.js");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -18019,7 +18021,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/lib/dot.js");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/lib/dot.js");
         }
     }
 })();
@@ -18036,7 +18038,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _regenerator = __webpack_require__(10);
+var _regenerator = __webpack_require__(8);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
@@ -18264,7 +18266,7 @@ var _ref8 = _jsx(Info, {});
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/layer/index.jsx");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/layer/index.jsx");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -18272,7 +18274,7 @@ var _ref8 = _jsx(Info, {});
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/layer/index.jsx");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/layer/index.jsx");
         }
     }
 })();
@@ -19068,7 +19070,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _regenerator = __webpack_require__(10);
+var _regenerator = __webpack_require__(8);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
@@ -19194,7 +19196,7 @@ exports.default = Model;
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/store/index.js");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/store/index.js");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -19202,7 +19204,7 @@ exports.default = Model;
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/store/index.js");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/store/index.js");
         }
     }
 })();
@@ -21921,7 +21923,7 @@ var setCookie = exports.setCookie = function setCookie(name, value) {
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/utils/cookie.js");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/utils/cookie.js");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -21929,7 +21931,7 @@ var setCookie = exports.setCookie = function setCookie(name, value) {
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/utils/cookie.js");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/utils/cookie.js");
         }
     }
 })();
@@ -21988,6 +21990,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
+var _regenerator = __webpack_require__(8);
+
+var _regenerator2 = _interopRequireDefault(_regenerator);
+
 var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -22015,6 +22021,8 @@ var _article2 = _interopRequireDefault(_article);
 var _extend = __webpack_require__(68);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -22056,9 +22064,9 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 //     await Article.getArticle(id)
 //     return []
 // })
-var _ref = _jsx('div', {}, void 0, '\u5F53\u524D\u6587\u6863\u4E0D\u5B58\u5728');
+var _ref2 = _jsx('div', {});
 
-var _ref2 = _jsx('span', {}, void 0, ' \u5206\u7C7B : ');
+var _ref3 = _jsx('span', {}, void 0, ' \u5206\u7C7B : ');
 
 var Main = (0, _mobxReact.observer)(_class = (_class2 = function (_React$Component) {
     _inherits(Main, _React$Component);
@@ -22071,10 +22079,31 @@ var Main = (0, _mobxReact.observer)(_class = (_class2 = function (_React$Compone
 
     _createClass(Main, [{
         key: 'componentWillMount',
-        value: function componentWillMount() {
-            var id = this.props.match.params.id;
-            _article2.default.getArticle(id);
-        }
+        value: function () {
+            var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+                var id;
+                return _regenerator2.default.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                id = this.props.match.params.id;
+                                _context.next = 3;
+                                return _article2.default.getArticle(id);
+
+                            case 3:
+                            case 'end':
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, this);
+            }));
+
+            function componentWillMount() {
+                return _ref.apply(this, arguments);
+            }
+
+            return componentWillMount;
+        }()
     }, {
         key: 'componentDidUpdate',
         value: function componentDidUpdate() {
@@ -22089,23 +22118,18 @@ var Main = (0, _mobxReact.observer)(_class = (_class2 = function (_React$Compone
         value: function render() {
 
             if (!_article2.default.article.publicDate) {
-                return _ref;
+                return _ref2;
             }
             return _react2.default.createElement(
                 'div',
                 { ref: 'article', className: 'article' },
-                _jsx('h1', {
-                    className: 'hide'
-                }, void 0, _article2.default.article.title),
-                _jsx('h2', {
-                    className: 'hide'
-                }, void 0, _article2.default.article.classify.title, ',', _article2.default.article.title),
+                _jsx('kbd', {}, void 0, _article2.default.article.classify.title, ',', _article2.default.article.title),
                 _jsx('p', {
                     className: 'h5'
                 }, void 0, _article2.default.article.title),
                 _jsx('p', {
                     className: 'info'
-                }, void 0, _jsx('span', {}, void 0, '\u53D1\u8868\u4E8E : ', (0, _extend.getUTFDate)(_article2.default.article.publicDate).split(' ')[0]), ' |', _ref2, _jsx(_reactRouterDom.Link, {
+                }, void 0, _jsx('span', {}, void 0, '\u53D1\u8868\u4E8E : ', (0, _extend.getUTFDate)(_article2.default.article.publicDate).split(' ')[0]), ' |', _ref3, _jsx(_reactRouterDom.Link, {
                     to: '/cate/' + _article2.default.article.classify.id
                 }, void 0, _jsx('span', {}, void 0, _article2.default.article.classify.title))),
                 _jsx('div', {
@@ -22117,15 +22141,29 @@ var Main = (0, _mobxReact.observer)(_class = (_class2 = function (_React$Compone
         }
     }], [{
         key: 'onEnter',
-        value: function onEnter(_ref3) {
-            var states = _ref3.states,
-                pathname = _ref3.pathname,
-                query = _ref3.query,
-                params = _ref3.params;
+        value: function () {
+            var _ref4 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee2(_ref5) {
+                var states = _ref5.states,
+                    pathname = _ref5.pathname,
+                    query = _ref5.query,
+                    params = _ref5.params;
+                return _regenerator2.default.wrap(function _callee2$(_context2) {
+                    while (1) {
+                        switch (_context2.prev = _context2.next) {
+                            case 0:
+                            case 'end':
+                                return _context2.stop();
+                        }
+                    }
+                }, _callee2, this);
+            }));
 
-            (0, _decorators._setTitle)('testsdfsdf');
-            _article2.default.getArticle(params.id);
-        }
+            function onEnter(_x) {
+                return _ref4.apply(this, arguments);
+            }
+
+            return onEnter;
+        }()
     }]);
 
     return Main;
@@ -22139,7 +22177,7 @@ exports.default = Main;
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/article/index.jsx");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/article/index.jsx");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -22147,7 +22185,7 @@ exports.default = Main;
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/article/index.jsx");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/article/index.jsx");
         }
     }
 })();
@@ -22203,7 +22241,7 @@ exports.default = Main;
     if (typeof __REACT_HOT_LOADER__ === 'undefined') {
       return;
     } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-      __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/utils/session.js");return;
+      __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/utils/session.js");return;
     } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
       /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
         continue;
@@ -22211,7 +22249,7 @@ exports.default = Main;
         namedExport = webpackExports[key];
       } catch (err) {
         continue;
-      }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/utils/session.js");
+      }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/utils/session.js");
     }
   }
 })();

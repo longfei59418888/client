@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 190:
+/***/ 191:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25,19 +25,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(11);
 
-__webpack_require__(198);
+__webpack_require__(200);
 
 var _decorators = __webpack_require__(30);
 
 var _mobxReact = __webpack_require__(31);
 
-var _article = __webpack_require__(67);
+var _cate = __webpack_require__(195);
 
-var _article2 = _interopRequireDefault(_article);
-
-var _extend = __webpack_require__(68);
+var _cate2 = _interopRequireDefault(_cate);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49,25 +47,19 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var _ref2 = _jsx('div', {}, void 0, '\u5F53\u524D\u6587\u6863\u4E0D\u5B58\u5728');
-
-var _ref3 = _jsx('span', {}, void 0, ' \u5206\u7C7B : ');
-
 var Main = (_dec = (0, _decorators.loading)(function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee(props, state) {
-        var id;
         return _regenerator2.default.wrap(function _callee$(_context) {
             while (1) {
                 switch (_context.prev = _context.next) {
                     case 0:
-                        id = props.match.params.id;
-                        _context.next = 3;
-                        return _article2.default.getArticle(id);
+                        _context.next = 2;
+                        return _cate2.default.getList();
 
-                    case 3:
+                    case 2:
                         return _context.abrupt('return', []);
 
-                    case 4:
+                    case 3:
                     case 'end':
                         return _context.stop();
                 }
@@ -88,36 +80,17 @@ var Main = (_dec = (0, _decorators.loading)(function () {
     }
 
     _createClass(Main, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            this.refs['article'].querySelectorAll('pre code').forEach(function (item) {
-                hljs.highlightBlock(item);
-            });
-        }
-    }, {
         key: 'render',
         value: function render() {
-
-            if (!_article2.default.article) {
-                return _ref2;
-            }
-            return _react2.default.createElement(
-                'div',
-                { ref: 'article', className: 'article' },
-                _jsx('p', {
-                    className: 'h5'
-                }, void 0, _article2.default.article.title),
-                _jsx('p', {
-                    className: 'info'
-                }, void 0, _jsx('span', {}, void 0, '\u53D1\u8868\u4E8E : ', (0, _extend.getUTFDate)(_article2.default.article.publicDate).split(' ')[0]), ' |', _ref3, _jsx(_reactRouterDom.Link, {
-                    to: '/cate/' + _article2.default.article.classify.id
-                }, void 0, _jsx('span', {}, void 0, _article2.default.article.classify.title))),
-                _jsx('div', {
-                    className: 'content'
+            return _jsx('div', {
+                className: 'cate-box'
+            }, void 0, _cate2.default.list.map(function (item, index) {
+                return _jsx(_reactRouterDom.Link, {
+                    to: '/cate/' + item.id
                 }, void 0, _jsx('div', {
-                    dangerouslySetInnerHTML: { __html: _article2.default.article.content }
-                }))
-            );
+                    className: 'item'
+                }, void 0, _jsx('p', {}, void 0, _jsx('span', {}, void 0, index + 1), '.', item.title), _jsx('span', {}, void 0, item.description)));
+            }));
         }
     }]);
 
@@ -131,7 +104,7 @@ exports.default = Main;
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/article/index.jsx");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/cate/index.jsx");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -139,20 +112,20 @@ exports.default = Main;
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/article/index.jsx");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/cate/index.jsx");
         }
     }
 })();
 
 /***/ }),
 
-/***/ 198:
+/***/ 200:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(199);
+var content = __webpack_require__(201);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -160,7 +133,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(189)(content, options);
+var update = __webpack_require__(190)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -178,15 +151,15 @@ if(false) {
 
 /***/ }),
 
-/***/ 199:
+/***/ 201:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(188)(undefined);
+exports = module.exports = __webpack_require__(189)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, ".article {\n  padding: 70px 30px;\n  color: #ddd; }\n  .article .h5 {\n    text-align: center;\n    font-size: 26px;\n    letter-spacing: 1px; }\n  .article .info {\n    font-size: 12px;\n    color: #aaa;\n    letter-spacing: 1px;\n    text-align: center;\n    line-height: 40px; }\n    .article .info a {\n      color: #aaa; }\n  .article .content {\n    margin-top: 30px; }\n    .article .content p {\n      line-height: 1.5; }\n    .article .content pre {\n      border-radius: 2px;\n      overflow: hidden; }\n      .article .content pre code {\n        padding-top: 0;\n        padding-bottom: 15px;\n        line-height: 1.3;\n        font-size: 14px; }\n", ""]);
+exports.push([module.i, ".cate-box {\n  position: relative;\n  height: 100%;\n  overflow: hidden;\n  padding: 130px 40px 0; }\n  .cate-box .item {\n    background: rgba(255, 255, 255, 0.3);\n    padding: 10px 15px;\n    width: calc(33.33% - 30px);\n    height: 60px;\n    border-radius: 5px;\n    cursor: pointer;\n    float: left;\n    margin: 10px 15px;\n    position: relative;\n    letter-spacing: 1px; }\n    .cate-box .item p {\n      color: #eee; }\n    .cate-box .item > span {\n      font-size: 12px;\n      display: inline-block;\n      margin-top: 7px;\n      color: #bbb; }\n", ""]);
 
 // exports
 

@@ -126,7 +126,7 @@ exports.default = Main;
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/deal/index.jsx");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/deal/index.jsx");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -134,7 +134,7 @@ exports.default = Main;
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/containers/deal/index.jsx");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/deal/index.jsx");
         }
     }
 })();
@@ -336,7 +336,7 @@ exports.default = Model;
         if (typeof __REACT_HOT_LOADER__ === 'undefined') {
             return;
         } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/store/cate.js");return;
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/store/cate.js");return;
         } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
             /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
                 continue;
@@ -344,7 +344,7 @@ exports.default = Model;
                 namedExport = webpackExports[key];
             } catch (err) {
                 continue;
-            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client-cms/src/store/cate.js");
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/store/cate.js");
         }
     }
 })();

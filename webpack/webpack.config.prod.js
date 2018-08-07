@@ -104,7 +104,7 @@ var prodConfig = {
         new ExtractTextPlugin('css/[name].css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production'),
-            'DEVELOPMETN_URL': JSON.stringify('http://localhost:8081/')
+            'DEVELOPMETN_URL': JSON.stringify('https://api.gilea.cn/')
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',

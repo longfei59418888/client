@@ -374,7 +374,7 @@ exports = module.exports = __webpack_require__(18)(undefined);
 
 
 // module
-exports.push([module.i, ".cate-box {\n  position: relative;\n  height: 100%;\n  overflow: hidden;\n  padding: 130px 40px 0; }\n  .cate-box .item {\n    background: rgba(255, 255, 255, 0.3);\n    padding: 10px 15px;\n    width: calc(33.33% - 30px);\n    height: 60px;\n    border-radius: 5px;\n    cursor: pointer;\n    float: left;\n    margin: 10px 15px;\n    position: relative;\n    letter-spacing: 1px; }\n    .cate-box .item p {\n      color: #eee; }\n    .cate-box .item > span {\n      font-size: 12px;\n      display: inline-block;\n      margin-top: 7px;\n      color: #bbb; }\n", ""]);
+exports.push([module.i, ".cate-box {\n  position: relative;\n  height: 100%;\n  overflow: hidden;\n  padding: 130px 40px 0; }\n  .cate-box .item {\n    background: rgba(255, 255, 255, 0.3);\n    padding: 8px 0 0 15px;\n    width: calc(33.33% - 30px);\n    height: 60px;\n    border-radius: 5px;\n    cursor: pointer;\n    float: left;\n    margin: 10px 15px;\n    position: relative;\n    letter-spacing: 1px; }\n    .cate-box .item p {\n      color: #eee; }\n    .cate-box .item > span {\n      font-size: 12px;\n      display: inline-block;\n      margin-top: 2px;\n      line-height: 1.2;\n      color: #bbb; }\n", ""]);
 
 // exports
 

@@ -24,6 +24,9 @@ export default class Main extends React.Component {
         let id = this.props.match.params.id
         await Article.getArticle(id)
     }
+    componentWillUnmount(){
+        Article.article={}
+    }
     componentDidUpdate() {
         if(this.refs['article']){
             this.refs['article'].querySelectorAll('pre code').forEach(item=>{

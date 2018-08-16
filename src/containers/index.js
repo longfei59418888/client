@@ -5,9 +5,15 @@ import style from './index.scss'
 import dot from './lib/dot'
 import Layer  from './layer'
 import Article from './article'
+import init from './utils/init'
+
+
+
 class Home extends React.Component {
     componentDidMount() {
         dot(this.refs['canvas'], {})
+        // 初始化设置
+        init()
     }
     render() {
         return <div style={{position: 'absolute', width: '100%', height: '100%'}}>

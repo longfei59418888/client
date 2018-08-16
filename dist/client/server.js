@@ -12679,6 +12679,10 @@ var _article = __webpack_require__(280);
 
 var _article2 = _interopRequireDefault(_article);
 
+var _init = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./utils/init\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _init2 = _interopRequireDefault(_init);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12705,6 +12709,8 @@ var Home = function (_React$Component) {
               key: "componentDidMount",
               value: function componentDidMount() {
                      (0, _dot2.default)(this.refs['canvas'], {});
+                     // 初始化设置
+                     (0, _init2.default)();
               }
        }, {
               key: "render",

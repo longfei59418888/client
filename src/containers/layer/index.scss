@@ -123,6 +123,7 @@
 
 @media screen and (max-width: 640px) {
   .layer-box{
+    border-top: none;
     .main{
       width: 100%;
       .mask{
@@ -177,6 +178,7 @@
         width: 100%;
         top:50px;
         bottom: 0;
+        height: auto;
       }
     }
   }

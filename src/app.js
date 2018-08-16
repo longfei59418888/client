@@ -4,14 +4,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 import {AppContainer} from 'react-hot-loader'
 import App from './containers/index';
 import style from './style/util.scss'
+import init from './utils/init'
 
 
-document.body.addEventListener('touchmove', function(evt) {
-	console.log(1)
-	evt.preventDefault();
-});
-
-
+// 初始化设置
+init()
 
 const renderApp = App => {
 	let renderDom = render;

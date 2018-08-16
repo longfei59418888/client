@@ -51,9 +51,16 @@
     .search{
       margin: 0 15px;
       height: 40px;
+
       input{
         height: 40px;
-        line-height: 40px;
+        font-size: 12px;
+        line-height: 20px;
+        width: 220px;
+      }
+      button{
+        font-size: 14px;
+        border: none;
       }
     }
     .hot-list{

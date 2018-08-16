@@ -26,9 +26,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(32);
+var _reactRouterDom = __webpack_require__(33);
 
-__webpack_require__(290);
+__webpack_require__(294);
 
 var _decorators = __webpack_require__(51);
 
@@ -40,6 +40,10 @@ var _article2 = _interopRequireDefault(_article);
 
 var _extend = __webpack_require__(105);
 
+var _index = __webpack_require__(106);
+
+var _index2 = _interopRequireDefault(_index);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50,11 +54,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var _ref2 = _jsx('div', {});
+var _ref2 = _jsx('span', {}, void 0, ' \u5206\u7C7B : ');
 
-var _ref3 = _jsx('span', {}, void 0, ' \u5206\u7C7B : ');
+var _ref3 = _jsx('hr', {});
 
-var _ref4 = _jsx('hr', {});
+var _ref5 = _jsx('span', {}, void 0, ' \u5206\u7C7B : ');
+
+var _ref6 = _jsx('hr', {});
 
 var Main = (_dec = (0, _decorators.loading)(function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee(props, state) {
@@ -104,63 +110,129 @@ var Main = (_dec = (0, _decorators.loading)(function () {
     _createClass(Main, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var boxList = this.refs['boxList'],
-                _this = this,
-                scroll = this.refs['scroll'];
-            _this.scrollTop = _article2.default.position;
-            boxList.scrollTop = _this.scrollTop;
-            boxList.addEventListener('scroll', getTop);
-            function getTop() {
-                _this.scrollTop = boxList.scrollTop;
-                if (_article2.default.loading || _article2.default.end) return;
-                if (scroll.offsetHeight - (document.body.offsetHeight - 50 + boxList.scrollTop) < 500) {
-                    _article2.default.getList();
-                }
-            }
+            if (!window.DEVICE_IS_IPHONE) {
+                var getTop = function getTop() {
+                    _this.scrollTop = boxList.scrollTop;
+                    if (_article2.default.loading || _article2.default.end) return;
+                    if (scroll.offsetHeight - (document.body.offsetHeight - 50 + boxList.scrollTop) < 500) {
+                        _article2.default.getList();
+                    }
+                };
 
-            this.removeEvent = function () {
-                boxList.removeEventListener('scroll', getTop);
-            };
+                var boxList = this.refs['boxList'],
+                    _this = this,
+                    scroll = this.refs['scroll'];
+                _this.scrollTop = _article2.default.position;
+                boxList.scrollTop = _this.scrollTop;
+                boxList.addEventListener('scroll', getTop);
+
+
+                this.removeEvent = function () {
+                    boxList.removeEventListener('scroll', getTop);
+                };
+            }
         }
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            _article2.default.position = this.scrollTop;
-            this.removeEvent();
+            if (!window.DEVICE_IS_IPHONE) {
+                _article2.default.position = this.scrollTop;
+                this.removeEvent();
+            }
         }
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { ref: 'boxList', className: 'home' },
-                _react2.default.createElement(
+            var _this3 = this;
+
+            if (!window.DEVICE_IS_IPHONE) {
+                return _react2.default.createElement(
                     'div',
-                    { ref: 'scroll', className: 'scroll' },
-                    _ref2,
-                    _jsx('div', {}, void 0, _article2.default.list.map(function (item, index) {
-                        return _jsx('div', {
-                            className: 'item'
-                        }, void 0, _jsx('p', {
-                            className: 'h5'
-                        }, void 0, item.title), _jsx('p', {
-                            className: 'info'
-                        }, void 0, _jsx('span', {}, void 0, '\u53D1\u8868\u4E8E : ', (0, _extend.getUTFDate)(item.publicDate).split(' ')[0]), ' |', _ref3, _jsx(_reactRouterDom.Link, {
-                            to: '/cate/' + item.classify.id
-                        }, void 0, _jsx('span', {}, void 0, item.classify.title))), _jsx('div', {
-                            className: 'descript'
-                        }, void 0, _jsx('div', {
-                            dangerouslySetInnerHTML: { __html: item.description }
-                        })), _jsx('div', {
-                            className: 'btn'
-                        }, void 0, _jsx(_reactRouterDom.Link, {
-                            to: '/article/' + item.id
-                        }, void 0, '\u9605\u8BFB\u5168\u6587')), _ref4);
-                    })),
-                    _jsx('div', {
-                        className: 'loading'
-                    }, void 0, _article2.default.end ? _article2.default.list.length < 1 ? '--努力更新中--' : '--完毕--' : '加载更多..')
-                )
+                    { ref: 'boxList', className: 'home' },
+                    _react2.default.createElement(
+                        'div',
+                        { ref: 'scroll', className: 'scroll' },
+                        _jsx('div', {}, void 0, _article2.default.list.map(function (item, index) {
+                            return _jsx('div', {
+                                className: 'item'
+                            }, void 0, _jsx('p', {
+                                className: 'h5'
+                            }, void 0, item.title), _jsx('p', {
+                                className: 'info'
+                            }, void 0, _jsx('span', {}, void 0, '\u53D1\u8868\u4E8E : ', (0, _extend.getUTFDate)(item.publicDate).split(' ')[0]), ' |', _ref2, _jsx(_reactRouterDom.Link, {
+                                to: '/cate/' + item.classify.id
+                            }, void 0, _jsx('span', {}, void 0, item.classify.title))), _jsx('div', {
+                                className: 'descript'
+                            }, void 0, _jsx('div', {
+                                dangerouslySetInnerHTML: { __html: item.description }
+                            })), _jsx('div', {
+                                className: 'btn'
+                            }, void 0, _jsx(_reactRouterDom.Link, {
+                                to: '/article/' + item.id
+                            }, void 0, '\u9605\u8BFB\u5168\u6587')), _ref3);
+                        })),
+                        _jsx('div', {
+                            className: 'loading'
+                        }, void 0, _article2.default.end ? _article2.default.list.length < 1 ? '--努力更新中--' : '--完毕--' : '加载更多..')
+                    )
+                );
+            }
+            return _react2.default.createElement(
+                _index2.default,
+                {
+                    ref: 'scroller',
+                    init: { x: 0, y: _article2.default.position },
+                    leaveBefor: function leaveBefor(scroller) {
+                        _article2.default.position = scroller.y;
+                    },
+                    onLoadMore: function () {
+                        var _ref4 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee2(scroller, bak) {
+                            return _regenerator2.default.wrap(function _callee2$(_context2) {
+                                while (1) {
+                                    switch (_context2.prev = _context2.next) {
+                                        case 0:
+                                            _context2.next = 2;
+                                            return _article2.default.getList();
+
+                                        case 2:
+                                            if (_article2.default.end) bak(true);else bak();
+
+                                        case 3:
+                                        case 'end':
+                                            return _context2.stop();
+                                    }
+                                }
+                            }, _callee2, _this3);
+                        }));
+
+                        return function (_x3, _x4) {
+                            return _ref4.apply(this, arguments);
+                        };
+                    }()
+                },
+                _jsx('div', {
+                    className: 'home'
+                }, void 0, _jsx('div', {
+                    className: 'scroll'
+                }, void 0, _jsx('div', {}, void 0, _article2.default.list.map(function (item, index) {
+                    return _jsx('div', {
+                        className: 'item'
+                    }, void 0, _jsx('p', {
+                        className: 'h5'
+                    }, void 0, item.title), _jsx('p', {
+                        className: 'info'
+                    }, void 0, _jsx('span', {}, void 0, '\u53D1\u8868\u4E8E : ', (0, _extend.getUTFDate)(item.publicDate).split(' ')[0]), ' |', _ref5, _jsx(_reactRouterDom.Link, {
+                        to: '/cate/' + item.classify.id
+                    }, void 0, _jsx('span', {}, void 0, item.classify.title))), _jsx('div', {
+                        className: 'descript'
+                    }, void 0, _jsx('div', {
+                        dangerouslySetInnerHTML: { __html: item.description }
+                    })), _jsx('div', {
+                        className: 'btn'
+                    }, void 0, _jsx(_reactRouterDom.Link, {
+                        to: '/article/' + item.id
+                    }, void 0, '\u9605\u8BFB\u5168\u6587')), _ref6);
+                }))))
             );
         }
     }]);
@@ -190,12 +262,12 @@ exports.default = Main;
 
 /***/ }),
 
-/***/ 290:
+/***/ 294:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    var content = __webpack_require__(291);
-    var insertCss = __webpack_require__(19);
+    var content = __webpack_require__(295);
+    var insertCss = __webpack_require__(13);
 
     if (typeof content === 'string') {
       content = [[module.i, content, '']];
@@ -226,10 +298,10 @@ exports.default = Main;
 
 /***/ }),
 
-/***/ 291:
+/***/ 295:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(18)(undefined);
+exports = module.exports = __webpack_require__(12)(undefined);
 // imports
 
 

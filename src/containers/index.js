@@ -12,13 +12,11 @@ class Home extends React.Component {
     render() {
         return <div style={{position: 'absolute', width: '100%', height: '100%'}}>
             <Layer>
-                <Route path='/'
+                <Route exact path='/'
                        render={props => (<LazyRoute {...props} component={import('./home')}/>)}/>
-                <Route path='/index'
+                <Route exact path='/index'
                        render={props => (<LazyRoute {...props} component={import('./home')}/>)}/>
-                <Route  path='/article/:id' component={Article}
-                        // render={props => (<LazyRoute {...props} component={import ('./article')}/>)}
-                />
+                <Route  path='/article/:id' component={Article} />
                 <Route exact  path='/cate'
                         render={props => (<LazyRoute {...props} component={import ('./cate')}/>)}/>
                 <Route exact path='/cate/:id'

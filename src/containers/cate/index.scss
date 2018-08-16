@@ -27,3 +27,12 @@
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .cate-box{
+    padding: 40px 0;
+    .item{
+      width: calc(50% - 30px);
+    }
+  }
+}

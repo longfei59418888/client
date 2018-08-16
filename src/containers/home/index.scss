@@ -53,3 +53,34 @@
     }
   }
 }
+
+
+@media screen and (max-width: 640px) {
+  .home{
+    .scroll{
+      .item{
+        .h5{
+          font-size: 18px;
+          height: 18px;
+          word-break:break-all;
+          text-overflow:ellipsis;
+          overflow:hidden;
+        }
+        .descript{
+          img{
+            max-width: 100% !important;
+            height: auto !important;
+          }
+          pre{
+            white-space: pre !important;
+            width: 100%;
+            overflow: scroll;
+            //code{
+            //  width: 630px;
+            //}
+          }
+        }
+      }
+    }
+  }
+}

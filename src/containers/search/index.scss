@@ -44,3 +44,28 @@
   }
 }
 
+
+@media screen and (max-width: 640px) {
+  .search-box{
+    padding: 20px 0;
+    .search{
+      margin: 0 15px;
+      height: 40px;
+      input{
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+    .hot-list{
+      margin: 20px 10px;
+      a{
+        float: left;
+        padding: 10px 30px 15px 20px;
+        font-size: 14px;
+        display: inline-block;
+        background: none;
+        color: #aaa;
+      }
+    }
+  }
+}

@@ -74,3 +74,41 @@
   opacity: 1;
   transition: all 200ms ease;
 }
+
+@media screen and (max-width: 640px) {
+  .deal-box{
+    padding: 40px 0;
+    zoom: .7;
+    .item{
+      position: static;
+      &:nth-child(1){
+        background: rgba(255, 255, 255, 0.25);
+        height: 180px;
+        width: 180px;
+        top:24%;
+        left: 14%;
+      }
+      &:nth-child(2){
+        background: rgba(132, 217, 68, 0.25);
+        height: 100px;
+        width: 100px;
+        top:42%;
+        left: 30%;
+      }
+      &:nth-child(3){
+        background: rgba(221, 79, 67, 0.25);
+        height: 150px;
+        width: 150px;
+        top:45%;
+        left: 54%;
+      }
+      &:nth-child(4){
+        background: rgba(120, 177, 249, 0.25);
+        height: 200px;
+        width: 200px;
+        top:20%;
+        left: 54%;
+      }
+    }
+  }
+}

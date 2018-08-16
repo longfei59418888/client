@@ -79,3 +79,17 @@
     cursor: pointer;
   }
 }
+
+
+@media screen and (max-width: 640px) {
+  .faq-box{
+    padding: 40px 0;
+    .box{
+      width: 300px;
+      margin-left: 10px;
+    }
+  }
+  .faq-box .code .er{width: 150px}
+}
+
+

@@ -24,13 +24,12 @@ export default class Main extends React.Component {
             _this = this,
             scroll = this.refs['scroll']
         _this.scrollTop = Article.position;
-        console.log(_this.scrollTop)
         boxList.scrollTop = _this.scrollTop
         boxList.addEventListener('scroll', getTop)
         function getTop() {
             _this.scrollTop = boxList.scrollTop
             if(Article.loading || Article.end) return
-            if (scroll.offsetHeight - (document.body.offsetHeight + boxList.scrollTop) < 500) {
+            if (scroll.offsetHeight - (document.body.offsetHeight-50 + boxList.scrollTop) < 500) {
                 Article.getList()
             }
         }
@@ -41,7 +40,6 @@ export default class Main extends React.Component {
     }
 
     componentWillUnmount() {
-        console.log(this.scrollTop)
         Article.position = this.scrollTop
         this.removeEvent()
     }

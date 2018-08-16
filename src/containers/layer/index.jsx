@@ -4,20 +4,36 @@ import './index.scss';
 import INFO from 'src/store/index'
 import {loading} from "../../decorators";
 import {observer} from 'mobx-react'
-
+import classnames from 'classnames'
 
 export default class Main extends React.Component {
-
+    state = {
+        showMenu : false
+    }
     render() {
         return (
             <div className='layer-box'>
                 <div className="main">
-                    <div className="left">
+                    <div className="top">
+                        <span onClick={()=>{
+                            this.setState({showMenu : !this.state.showMenu })
+                        }}>
+                            <img src={require('./image/iphone-mune.png')} alt=""/>
+                        </span>
+                        <p>XiaoLong's Blog{this.state.showMenu}</p>
+                        <span></span>
+                    </div>
+                    {this.state.showMenu?<div onClick={()=>{
+                        this.setState({showMenu : !this.state.showMenu })
+                    }} className="mask"></div>:''}
+                    <div className={classnames('left',{ action: this.state.showMenu})}>
                         <div className="title">
                             <p>XiaoLong's Blog</p>
                             <span>Learning together</span>
                         </div>
-                        <div className="cate">
+                        <div className="cate" onClick={()=>{
+                            this.setState({showMenu : !this.state.showMenu })
+                        }}>
                             <Link to='/index'>
                                 <div className="item">
                                     <img src={require('./image/home.png')} alt=""/>

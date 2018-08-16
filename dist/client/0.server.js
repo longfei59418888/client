@@ -28,7 +28,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(32);
 
-__webpack_require__(289);
+__webpack_require__(290);
 
 var _decorators = __webpack_require__(51);
 
@@ -108,13 +108,12 @@ var Main = (_dec = (0, _decorators.loading)(function () {
                 _this = this,
                 scroll = this.refs['scroll'];
             _this.scrollTop = _article2.default.position;
-            console.log(_this.scrollTop);
             boxList.scrollTop = _this.scrollTop;
             boxList.addEventListener('scroll', getTop);
             function getTop() {
                 _this.scrollTop = boxList.scrollTop;
                 if (_article2.default.loading || _article2.default.end) return;
-                if (scroll.offsetHeight - (document.body.offsetHeight + boxList.scrollTop) < 500) {
+                if (scroll.offsetHeight - (document.body.offsetHeight - 50 + boxList.scrollTop) < 500) {
                     _article2.default.getList();
                 }
             }
@@ -126,7 +125,6 @@ var Main = (_dec = (0, _decorators.loading)(function () {
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            console.log(this.scrollTop);
             _article2.default.position = this.scrollTop;
             this.removeEvent();
         }
@@ -192,11 +190,11 @@ exports.default = Main;
 
 /***/ }),
 
-/***/ 289:
+/***/ 290:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    var content = __webpack_require__(290);
+    var content = __webpack_require__(291);
     var insertCss = __webpack_require__(19);
 
     if (typeof content === 'string') {
@@ -228,7 +226,7 @@ exports.default = Main;
 
 /***/ }),
 
-/***/ 290:
+/***/ 291:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(18)(undefined);
@@ -236,7 +234,7 @@ exports = module.exports = __webpack_require__(18)(undefined);
 
 
 // module
-exports.push([module.i, ".home {\n  position: relative;\n  height: 100%;\n  overflow: auto; }\n  .home .scroll {\n    padding: 70px 40px 0; }\n    .home .scroll .item {\n      color: #ddd;\n      margin-bottom: 90px; }\n      .home .scroll .item .h5 {\n        text-align: center;\n        font-size: 26px;\n        letter-spacing: 1px; }\n      .home .scroll .item .info {\n        font-size: 12px;\n        color: #aaa;\n        letter-spacing: 1px;\n        text-align: center;\n        line-height: 40px; }\n        .home .scroll .item .info a {\n          color: #aaa; }\n      .home .scroll .item .descript {\n        line-height: 2;\n        margin: 30px 0; }\n      .home .scroll .item .btn {\n        padding: 30px 0 50px;\n        text-align: center; }\n        .home .scroll .item .btn a {\n          color: #666;\n          padding: 7px 14px;\n          background: #fff;\n          border-radius: 2px; }\n          .home .scroll .item .btn a:hover {\n            opacity: .9; }\n      .home .scroll .item hr {\n        width: 50px;\n        opacity: .2;\n        margin: 30px auto; }\n    .home .scroll .loading {\n      line-height: 60px;\n      color: #aaa;\n      font-size: 12px;\n      letter-spacing: 2px;\n      text-align: center; }\n", ""]);
+exports.push([module.i, ".home {\n  position: relative;\n  height: 100%;\n  overflow: auto; }\n  .home .scroll {\n    padding: 70px 40px 0; }\n    .home .scroll .item {\n      color: #ddd;\n      margin-bottom: 90px; }\n      .home .scroll .item .h5 {\n        text-align: center;\n        font-size: 26px;\n        letter-spacing: 1px; }\n      .home .scroll .item .info {\n        font-size: 12px;\n        color: #aaa;\n        letter-spacing: 1px;\n        text-align: center;\n        line-height: 40px; }\n        .home .scroll .item .info a {\n          color: #aaa; }\n      .home .scroll .item .descript {\n        line-height: 2;\n        margin: 30px 0; }\n      .home .scroll .item .btn {\n        padding: 30px 0 50px;\n        text-align: center; }\n        .home .scroll .item .btn a {\n          color: #666;\n          padding: 7px 14px;\n          background: #fff;\n          border-radius: 2px; }\n          .home .scroll .item .btn a:hover {\n            opacity: .9; }\n      .home .scroll .item hr {\n        width: 50px;\n        opacity: .2;\n        margin: 30px auto; }\n    .home .scroll .loading {\n      line-height: 60px;\n      color: #aaa;\n      font-size: 12px;\n      letter-spacing: 2px;\n      text-align: center; }\n\n@media screen and (max-width: 640px) {\n  .home .scroll .item .h5 {\n    font-size: 18px;\n    height: 18px;\n    word-break: break-all;\n    text-overflow: ellipsis;\n    overflow: hidden; }\n  .home .scroll .item .descript img {\n    max-width: 100% !important;\n    height: auto !important; }\n  .home .scroll .item .descript pre {\n    white-space: pre !important;\n    width: 100%;\n    overflow: scroll; } }\n", ""]);
 
 // exports
 

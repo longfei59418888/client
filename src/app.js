@@ -5,10 +5,12 @@ import {AppContainer} from 'react-hot-loader'
 import App from './containers/index';
 import style from './style/util.scss'
 
-document.addEventListener('touchmove', function(e){
-	e.preventDefault();}, false);
-document.addEventListener('touchstart', function(e){
-	e.preventDefault();}, false);
+
+document.body.addEventListener('touchmove', function(evt) {
+	console.log(1)
+	evt.preventDefault();
+});
+
 
 
 const renderApp = App => {

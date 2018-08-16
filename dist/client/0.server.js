@@ -1,58 +1,7 @@
 exports.ids = [0];
 exports.modules = {
 
-/***/ 289:
-/***/ (function(module, exports, __webpack_require__) {
-
-
-    var content = __webpack_require__(290);
-    var insertCss = __webpack_require__(19);
-
-    if (typeof content === 'string') {
-      content = [[module.i, content, '']];
-    }
-
-    module.exports = content.locals || {};
-    module.exports._getContent = function() { return content; };
-    module.exports._getCss = function() { return content.toString(); };
-    module.exports._insertCss = function(options) { return insertCss(content, options) };
-    
-    // Hot Module Replacement
-    // https://webpack.github.io/docs/hot-module-replacement
-    // Only activated in browser context
-    if (false) {
-      var removeCss = function() {};
-      module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--4-1!../../../node_modules/sass-loader/lib/loader.js!./index.scss", function() {
-        content = require("!!../../../node_modules/css-loader/index.js??ref--4-1!../../../node_modules/sass-loader/lib/loader.js!./index.scss");
-
-        if (typeof content === 'string') {
-          content = [[module.id, content, '']];
-        }
-
-        removeCss = insertCss(content, { replace: true });
-      });
-      module.hot.dispose(function() { removeCss(); });
-    }
-  
-
-/***/ }),
-
-/***/ 290:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(18)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".home {\n  position: relative;\n  height: 100%;\n  overflow: auto; }\n  .home .scroll {\n    padding: 70px 40px 0; }\n    .home .scroll .item {\n      color: #ddd;\n      margin-bottom: 90px; }\n      .home .scroll .item .h5 {\n        text-align: center;\n        font-size: 26px;\n        letter-spacing: 1px; }\n      .home .scroll .item .info {\n        font-size: 12px;\n        color: #aaa;\n        letter-spacing: 1px;\n        text-align: center;\n        line-height: 40px; }\n        .home .scroll .item .info a {\n          color: #aaa; }\n      .home .scroll .item .descript {\n        line-height: 2;\n        margin: 30px 0; }\n      .home .scroll .item .btn {\n        padding: 30px 0 50px;\n        text-align: center; }\n        .home .scroll .item .btn a {\n          color: #666;\n          padding: 7px 14px;\n          background: #fff;\n          border-radius: 2px; }\n          .home .scroll .item .btn a:hover {\n            opacity: .9; }\n      .home .scroll .item hr {\n        width: 50px;\n        opacity: .2;\n        margin: 30px auto; }\n    .home .scroll .loading {\n      line-height: 60px;\n      color: #aaa;\n      font-size: 12px;\n      letter-spacing: 2px;\n      text-align: center; }\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 32:
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77,7 +26,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(31);
+var _reactRouterDom = __webpack_require__(32);
 
 __webpack_require__(289);
 
@@ -240,6 +189,57 @@ exports.default = Main;
         }
     }
 })();
+
+/***/ }),
+
+/***/ 289:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var content = __webpack_require__(290);
+    var insertCss = __webpack_require__(19);
+
+    if (typeof content === 'string') {
+      content = [[module.i, content, '']];
+    }
+
+    module.exports = content.locals || {};
+    module.exports._getContent = function() { return content; };
+    module.exports._getCss = function() { return content.toString(); };
+    module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+    // Hot Module Replacement
+    // https://webpack.github.io/docs/hot-module-replacement
+    // Only activated in browser context
+    if (false) {
+      var removeCss = function() {};
+      module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--4-1!../../../node_modules/sass-loader/lib/loader.js!./index.scss", function() {
+        content = require("!!../../../node_modules/css-loader/index.js??ref--4-1!../../../node_modules/sass-loader/lib/loader.js!./index.scss");
+
+        if (typeof content === 'string') {
+          content = [[module.id, content, '']];
+        }
+
+        removeCss = insertCss(content, { replace: true });
+      });
+      module.hot.dispose(function() { removeCss(); });
+    }
+  
+
+/***/ }),
+
+/***/ 290:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(18)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".home {\n  position: relative;\n  height: 100%;\n  overflow: auto; }\n  .home .scroll {\n    padding: 70px 40px 0; }\n    .home .scroll .item {\n      color: #ddd;\n      margin-bottom: 90px; }\n      .home .scroll .item .h5 {\n        text-align: center;\n        font-size: 26px;\n        letter-spacing: 1px; }\n      .home .scroll .item .info {\n        font-size: 12px;\n        color: #aaa;\n        letter-spacing: 1px;\n        text-align: center;\n        line-height: 40px; }\n        .home .scroll .item .info a {\n          color: #aaa; }\n      .home .scroll .item .descript {\n        line-height: 2;\n        margin: 30px 0; }\n      .home .scroll .item .btn {\n        padding: 30px 0 50px;\n        text-align: center; }\n        .home .scroll .item .btn a {\n          color: #666;\n          padding: 7px 14px;\n          background: #fff;\n          border-radius: 2px; }\n          .home .scroll .item .btn a:hover {\n            opacity: .9; }\n      .home .scroll .item hr {\n        width: 50px;\n        opacity: .2;\n        margin: 30px auto; }\n    .home .scroll .loading {\n      line-height: 60px;\n      color: #aaa;\n      font-size: 12px;\n      letter-spacing: 2px;\n      text-align: center; }\n", ""]);
+
+// exports
+
 
 /***/ })
 

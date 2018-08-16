@@ -12,6 +12,8 @@ class Home extends React.Component {
     render() {
         return <div style={{position: 'absolute', width: '100%', height: '100%'}}>
             <Layer>
+                <Route path='/'
+                       render={props => (<LazyRoute {...props} component={import('./home')}/>)}/>
                 <Route path='/index'
                        render={props => (<LazyRoute {...props} component={import('./home')}/>)}/>
                 <Route  path='/article/:id' component={Article}

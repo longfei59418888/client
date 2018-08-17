@@ -12564,9 +12564,9 @@ var _reactDom = __webpack_require__(31);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _styleModule = __webpack_require__(284);
+var _style = __webpack_require__(284);
 
-var _styleModule2 = _interopRequireDefault(_styleModule);
+var _style2 = _interopRequireDefault(_style);
 
 var _iscrollProbe = __webpack_require__(286);
 
@@ -26934,8 +26934,8 @@ exports.push([module.i, ".article {\n  padding: 70px 30px;\n  color: #ddd; }\n  
     // Only activated in browser context
     if (false) {
       var removeCss = function() {};
-      module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--5-1!../../../../node_modules/sass-loader/lib/loader.js!./style.module.scss", function() {
-        content = require("!!../../../../node_modules/css-loader/index.js??ref--5-1!../../../../node_modules/sass-loader/lib/loader.js!./style.module.scss");
+      module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--4-1!../../../../node_modules/sass-loader/lib/loader.js!./style.scss", function() {
+        content = require("!!../../../../node_modules/css-loader/index.js??ref--4-1!../../../../node_modules/sass-loader/lib/loader.js!./style.scss");
 
         if (typeof content === 'string') {
           content = [[module.id, content, '']];
@@ -26956,12 +26956,10 @@ exports = module.exports = __webpack_require__(12)(undefined);
 
 
 // module
-exports.push([module.i, "._2abZF2YuqAeXi6w5t9uzX0 {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  overflow: hidden;\n  bottom: -60px; }\n", ""]);
+exports.push([module.i, ".comment_box {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  overflow: hidden;\n  bottom: -60px; }\n", ""]);
 
 // exports
-exports.locals = {
-	"comment_box": "_2abZF2YuqAeXi6w5t9uzX0"
-};
+
 
 /***/ }),
 /* 286 */

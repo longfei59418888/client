@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import style from './style.module.scss'
+import style from './style.scss'
 import Scroll from './iscroll-probe.js';  //该文件被修改
 
 

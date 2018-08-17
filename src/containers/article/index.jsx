@@ -5,8 +5,8 @@ import {loading, autobind} from "../../decorators";
 import {observer} from 'mobx-react'
 import {action} from 'mobx';
 import Article from 'src/store/article'
-import {getUTFDate} from 'src/utils/extend'
-import Scroller from '../util/iscroll/index.min'
+import {getUTFDate,DEVICE_IS_IPHONE} from 'src/utils/extend'
+import Scroller from '../util/Scroller'
 
 // @loading(async (props, state) => {
 //     let id = props.match.params.id
@@ -39,7 +39,7 @@ export default class Main extends React.Component {
         if (!Article.article.publicDate) {
             return <div></div>
         }
-        if(!window.DEVICE_IS_IPHONE){
+        if(!DEVICE_IS_IPHONE()){
             return (
                 <div ref='article' className='article'>
                     <kbd>{Article.article.classify.title},{Article.article.title}</kbd>

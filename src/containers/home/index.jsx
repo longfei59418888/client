@@ -4,8 +4,9 @@ import './index.scss';
 import {loading, autobind} from "../../decorators";
 import {observer} from 'mobx-react'
 import Article from 'src/store/article'
-import {getUTFDate} from 'src/utils/extend'
-import Scroller from '../util/iscroll/index.min'
+import {getUTFDate,DEVICE_IS_IPHONE} from 'src/utils/extend'
+import Scroller from '../util/Scroller/index'
+
 
 @loading(async (props, state) => {
     let id = props.match.params.id ? props.match.params.id : null
@@ -21,7 +22,7 @@ import Scroller from '../util/iscroll/index.min'
 export default class Main extends React.Component {
 
     componentDidMount() {
-        if(!window.DEVICE_IS_IPHONE){
+        if(!DEVICE_IS_IPHONE()){
             let boxList = this.refs['boxList'],
                 _this = this,
                 scroll = this.refs['scroll']
@@ -43,14 +44,14 @@ export default class Main extends React.Component {
     }
 
     componentWillUnmount() {
-        if(!window.DEVICE_IS_IPHONE){
+        if(!DEVICE_IS_IPHONE()){
             Article.position = this.scrollTop
             this.removeEvent()
         }
     }
 
     render() {
-        if(!window.DEVICE_IS_IPHONE){
+        if(!DEVICE_IS_IPHONE()){
             return (
                 <div ref='boxList' className='home'>
                     <div ref='scroll' className="scroll">

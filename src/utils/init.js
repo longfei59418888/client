@@ -20,11 +20,4 @@ export default (options) => {
     }, { passive: false })
 
 
-
-
-    // 判断是否是移动设备
-    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
-        window.DEVICE_IS_IPHONE = true
-    }
-
 }

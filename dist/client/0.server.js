@@ -28,7 +28,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(33);
 
-__webpack_require__(294);
+__webpack_require__(295);
 
 var _decorators = __webpack_require__(51);
 
@@ -110,7 +110,7 @@ var Main = (_dec = (0, _decorators.loading)(function () {
     _createClass(Main, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            if (!window.DEVICE_IS_IPHONE) {
+            if (!(0, _extend.DEVICE_IS_IPHONE)()) {
                 var getTop = function getTop() {
                     _this.scrollTop = boxList.scrollTop;
                     if (_article2.default.loading || _article2.default.end) return;
@@ -135,7 +135,7 @@ var Main = (_dec = (0, _decorators.loading)(function () {
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            if (!window.DEVICE_IS_IPHONE) {
+            if (!(0, _extend.DEVICE_IS_IPHONE)()) {
                 _article2.default.position = this.scrollTop;
                 this.removeEvent();
             }
@@ -145,7 +145,7 @@ var Main = (_dec = (0, _decorators.loading)(function () {
         value: function render() {
             var _this3 = this;
 
-            if (!window.DEVICE_IS_IPHONE) {
+            if (!(0, _extend.DEVICE_IS_IPHONE)()) {
                 return _react2.default.createElement(
                     'div',
                     { ref: 'boxList', className: 'home' },
@@ -262,11 +262,11 @@ exports.default = Main;
 
 /***/ }),
 
-/***/ 294:
+/***/ 295:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    var content = __webpack_require__(295);
+    var content = __webpack_require__(296);
     var insertCss = __webpack_require__(13);
 
     if (typeof content === 'string') {
@@ -298,7 +298,7 @@ exports.default = Main;
 
 /***/ }),
 
-/***/ 295:
+/***/ 296:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)(undefined);

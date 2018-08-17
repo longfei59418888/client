@@ -5,7 +5,7 @@ import style from './index.scss'
 import dot from './lib/dot'
 import Layer  from './layer'
 import Article from './article'
-import init from './utils/init'
+import init from '../utils/init'
 
 
 

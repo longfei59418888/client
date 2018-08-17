@@ -464,6 +464,11 @@ function _rotateImg(img, direction,canvas) {
 
 
 
+// 判断是否是移动设备
+export function DEVICE_IS_IPHONE (){
+    return /(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)
+}
+
 
 
 

@@ -466,6 +466,7 @@ function _rotateImg(img, direction,canvas) {
 
 // 判断是否是移动设备
 export function DEVICE_IS_IPHONE (){
+    if(process.env.BUILD_ENV == 'NODE') return false
     return /(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)
 }
 

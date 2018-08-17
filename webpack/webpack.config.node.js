@@ -77,6 +77,7 @@ var prodConfig = {
     plugins: [ // 定义环境变量为开发环境
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production'),
+            'process.env.BUILD_ENV': JSON.stringify('NODE'),
             'DEVELOPMETN_URL': JSON.stringify('https://api.gilea.cn/')
         }),
 

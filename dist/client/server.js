@@ -12550,7 +12550,7 @@ function DEVICE_IS_IPHONE() {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
@@ -12585,233 +12585,270 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var AppComponent = function (_React$Component) {
-  _inherits(AppComponent, _React$Component);
+    _inherits(AppComponent, _React$Component);
 
-  function AppComponent(props, context) {
-    _classCallCheck(this, AppComponent);
+    function AppComponent(props, context) {
+        _classCallCheck(this, AppComponent);
 
-    var _this2 = _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).call(this, props, context));
+        var _this2 = _possibleConstructorReturn(this, (AppComponent.__proto__ || Object.getPrototypeOf(AppComponent)).call(this, props, context));
 
-    _this2.state = {
-      refreshTip: 0,
-      moreTip: '上拉加载...'
-    };
-    _this2.onRefresh = _this2.props.onRefresh ? _this2.props.onRefresh : false;
-    _this2.onLoadMore = _this2.props.onLoadMore ? _this2.props.onLoadMore : false;
-    _this2.canRefresh = false; //是否可以再次刷新
-    _this2.isRefreshIng = false; //是否在刷新中
-    _this2.canLoadMore = false; // 是否可以再次加载
-    _this2.loadMoreIng = false; // 是否在加载中
-    _this2.loadEnd = false; // 是否加载完毕
-    _this2.doRefresh = false; //
-    return _this2;
-  }
-
-  _createClass(AppComponent, [{
-    key: 'render',
-    value: function render() {
-      return _jsx('div', {
-        style: { height: '100%', width: '100%', overflow: 'hidden', position: 'absolute' }
-      }, void 0, _react2.default.createElement(
-        'div',
-        { ref: 'boxScroll', style: { position: 'absolute', top: this.onRefresh ? -60 : 0, width: '100%', overflow: 'hidden', bottom: 0 } },
-        _react2.default.createElement(
-          'div',
-          { ref: 'box' },
-          _react2.default.createElement(
-            'div',
-            { ref: 'refresh', style: { height: 60, display: this.onRefresh ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center' } },
-            '\u4E0B\u62C9\u5237\u65B0...'
-          ),
-          this.props.children,
-          _react2.default.createElement(
-            'div',
-            { ref: 'loadMore', style: { height: 60, display: this.onLoadMore ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center' } },
-            '\u6B63\u5728\u52A0\u8F7D...'
-          )
-        )
-      ));
+        _this2.state = {
+            refreshTip: 0,
+            moreTip: '上拉加载...'
+        };
+        _this2.onRefresh = _this2.props.onRefresh ? _this2.props.onRefresh : false;
+        _this2.onLoadMore = _this2.props.onLoadMore ? _this2.props.onLoadMore : false;
+        _this2.canRefresh = false; //是否可以再次刷新
+        _this2.isRefreshIng = false; //是否在刷新中
+        _this2.canLoadMore = false; // 是否可以再次加载
+        _this2.loadMoreIng = false; // 是否在加载中
+        _this2.loadEnd = false; // 是否加载完毕
+        _this2.doRefresh = false; //
+        return _this2;
     }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this3 = this;
 
-      var iScroll = (0, _iscrollProbe2.default)(window, document, Math);
-      var _this = this;
-      _this.refs['box'].style['min-height'] = _this.refs['boxScroll'].offsetHeight + 1 + 'px';
-      _this.iScrollInstance = new iScroll(_this.refs['boxScroll'], {
-        probeType: 3,
-        mouseWheel: true,
-        disablePointer: true,
-        disableTouch: false,
-        disableMouse: false,
-        hasRefresh: _this.onRefresh,
-        preventDefault: false
-      });
-      //滚动结束
-      _this.iScrollInstance.on('scrollStartEnd', function () {
-        //正在加载或者刷新时候直接返回
-        if (_this3.isRefreshIng || _this3.loadMoreIng) return;
-        //是否可以刷新
-        if (_this.canRefresh) {
-          _this.refs.refresh.innerHTML = '正在刷新...';
-          _this.isRefreshIng = true;
-          setTimeout(function () {
-            _this.onRefresh(_this, function (type) {
-              _this.refreshEnd(type);
+    _createClass(AppComponent, [{
+        key: 'render',
+        value: function render() {
+            return _jsx('div', {
+                style: { height: '100%', width: '100%', overflow: 'hidden', position: 'absolute' }
+            }, void 0, _react2.default.createElement(
+                'div',
+                { ref: 'boxScroll', style: {
+                        position: 'absolute',
+                        top: this.onRefresh ? -60 : 0,
+                        width: '100%',
+                        overflow: 'hidden',
+                        bottom: 0
+                    } },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'iscroll-box', ref: 'box' },
+                    _react2.default.createElement(
+                        'div',
+                        { ref: 'refresh', style: {
+                                height: 60,
+                                display: this.onRefresh ? 'flex' : 'none',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            } },
+                        '\u4E0B\u62C9\u5237\u65B0...'
+                    ),
+                    this.props.children,
+                    _react2.default.createElement(
+                        'div',
+                        { ref: 'loadMore', style: {
+                                height: 60,
+                                display: this.onLoadMore ? 'flex' : 'none',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            } },
+                        '\u6B63\u5728\u52A0\u8F7D...'
+                    )
+                )
+            ));
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this3 = this;
+
+            var iScroll = (0, _iscrollProbe2.default)(window, document, Math);
+            var _this = this;
+            _this.refs['box'].style['min-height'] = _this.refs['boxScroll'].offsetHeight + 1 + 'px';
+            _this.iScrollInstance = new iScroll(_this.refs['boxScroll'], {
+                probeType: 3, // 每滚动以一像素，触发一次
+                mouseWheel: true,
+                disablePointer: true,
+                disableTouch: false,
+                disableMouse: false,
+                hasRefresh: _this.onRefresh,
+                preventDefault: false
             });
-          }, 100);
-        }
-        //加载更多
-        if (_this.canLoadMore && !_this.loadEnd) {
-          _this.loadMoreIng = true;
-          setTimeout(function () {
-            _this.onLoadMore(_this, function (type) {
-              _this.loadMoreEnd(type);
+            //滚动结束
+            _this.iScrollInstance.on('scrollStartEnd', function () {
+                //正在加载或者刷新时候直接返回
+                if (_this3.isRefreshIng || _this3.loadMoreIng) return;
+                //是否可以刷新
+                if (_this.canRefresh) {
+                    _this.refs.refresh.innerHTML = '正在刷新...';
+                    _this.isRefreshIng = true;
+                    setTimeout(function () {
+                        _this.onRefresh(_this, function (type) {
+                            _this.refreshEnd(type);
+                        });
+                    }, 100);
+                }
+                //加载更多
+                if (_this.canLoadMore && !_this.loadEnd) {
+                    _this.loadMoreIng = true;
+                    setTimeout(function () {
+                        _this.onLoadMore(_this, function (type) {
+                            _this.loadMoreEnd(type);
+                        });
+                    }, 100);
+                }
             });
-          }, 100);
+            //滚动中
+            _this.iScrollInstance.on('scroll', function () {
+                //正在加载或刷新直接返回
+                if (_this3.isRefreshIng || _this3.loadMoreIng) return;
+                //刷新
+                if (_this.onRefresh) {
+                    if (_this.iScrollInstance.y > 60 && !_this.canRefresh) {
+                        if (!_this.canRefresh) _this.refs.refresh.innerHTML = '松手刷新...';
+                        _this.canRefresh = true; //可以刷新
+                    }
+                    if (_this.iScrollInstance.y < 59 && _this.canRefresh) {
+                        if (_this.canRefresh) _this.refs.refresh.innerHTML = '下拉刷新...';
+                        _this.canRefresh = false; //不刷新
+                    }
+                }
+                //加载更多
+                if (_this.onLoadMore && !_this.loadEnd) {
+                    if (_this.iScrollInstance.y < _this.iScrollInstance.maxScrollY + 80 && !_this.canLoadMore) _this.canLoadMore = true; //可以加载
+                    if (_this.iScrollInstance.y > _this.iScrollInstance.maxScrollY + 80 && _this.canLoadMore) _this.canLoadMore = false; //不加载
+                }
+            });
+            //当前小于整页
+            if (_this.props.init && _this.props.init.x + _this.props.init.y != 0) {
+                _this.iScrollInstance.scrollTo(_this.props.init.x, _this.props.init.y, 0);
+            } else {
+                if (_this.iScrollInstance.maxScrollY == -1) {
+                    setTimeout(function () {
+                        _this.init();
+                    }, 100);
+                }
+            }
+            _this.imgLoadRefresh();
         }
-      });
-      //滚动中
-      _this.iScrollInstance.on('scroll', function () {
-        //正在加载或刷新直接返回
-        if (_this3.isRefreshIng || _this3.loadMoreIng) return;
-        //刷新
-        if (_this.onRefresh) {
-          if (_this.iScrollInstance.y > 60 && !_this.canRefresh) {
-            if (!_this.canRefresh) _this.refs.refresh.innerHTML = '松手刷新...';
-            _this.canRefresh = true; //可以刷新
-          }
-          if (_this.iScrollInstance.y < 59 && _this.canRefresh) {
-            if (_this.canRefresh) _this.refs.refresh.innerHTML = '下拉刷新...';
-            _this.canRefresh = false; //不刷新
-          }
+    }, {
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(np, ns) {
+            //组件改变刷新
+            if (np.children != this.props.children) this.doRefresh = true;
+            return true;
         }
-        //加载更多
-        if (_this.onLoadMore && !_this.loadEnd) {
-          if (_this.iScrollInstance.y < _this.iScrollInstance.maxScrollY + 80 && !_this.canLoadMore) _this.canLoadMore = true; //可以加载
-          if (_this.iScrollInstance.y > _this.iScrollInstance.maxScrollY + 80 && _this.canLoadMore) _this.canLoadMore = false; //不加载
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
+            if (this.doRefresh) this.refresh();
+            this.doRefresh = false;
         }
-      });
-      //当前小于整页
-      if (_this.props.init && _this.props.init.x + _this.props.init.y != 0) {
-        _this.iScrollInstance.scrollTo(_this.props.init.x, _this.props.init.y, 0);
-      } else {
-        if (_this.iScrollInstance.maxScrollY == -1) {
-          setTimeout(function () {
-            _this.init();
-          }, 100);
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            if (this.iScrollInstance.maxScrollY == -1) return;
+            if (this.props.leaveBefor) this.props.leaveBefor(this.iScrollInstance);
         }
-      }
-    }
-  }, {
-    key: 'shouldComponentUpdate',
-    value: function shouldComponentUpdate(np, ns) {
-      //组件改变刷新
-      if (np.children != this.props.children) this.doRefresh = true;
-      return true;
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
-      if (this.doRefresh) this.refresh();
-      this.doRefresh = false;
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      if (this.iScrollInstance.maxScrollY == -1) return;
-      if (this.props.leaveBefor) this.props.leaveBefor(this.iScrollInstance);
-    }
-    //加载更多完成
+    }, {
+        key: 'imgLoadRefresh',
+        value: function imgLoadRefresh() {
+            var _this = this;
+            _this.imgList = [];
+            _this.imgList = _this.refs['box'].querySelectorAll('img');
+            _this.imgList.forEach(function (item) {
+                console.log(item.complete);
+                if (!item.complete) {
+                    item.onload = function () {
+                        console.log(1);
+                        _this.iScrollInstance.refresh();
+                    };
+                }
+            });
+        }
 
-  }, {
-    key: 'loadMoreEnd',
-    value: function loadMoreEnd(type) {
-      var _this = this;
-      _this.canLoadMore = false;
-      setTimeout(function () {
-        if (type) _this.setEnd();
-        _this.iScrollInstance.refresh();
-        _this.loadMoreIng = false;
-      }, 100);
-    }
-    //加载完毕
+        //加载更多完成
 
-  }, {
-    key: 'setEnd',
-    value: function setEnd() {
-      var _this = this;
-      _this.refs.loadMore.innerHTML = '加载完毕...';
-      _this.loadEnd = true;
-    }
-    //刷新iscroll
+    }, {
+        key: 'loadMoreEnd',
+        value: function loadMoreEnd(type) {
+            var _this = this;
+            _this.canLoadMore = false;
+            setTimeout(function () {
+                if (type) _this.setEnd();
+                _this.iScrollInstance.refresh();
+                _this.loadMoreIng = false;
+            }, 100);
+        }
 
-  }, {
-    key: 'refresh',
-    value: function refresh() {
-      //
-      var _this = this;
-      setTimeout(function () {
-        _this.iScrollInstance.refresh();
-      }, 100);
-    }
-    //下拉刷新结束函数
+        //加载完毕
 
-  }, {
-    key: 'refreshEnd',
-    value: function refreshEnd(type) {
-      //type true:加载完毕
-      var _this = this;
-      _this.refs.refresh.innerHTML = '下拉刷新...';
-      _this.iScrollInstance.refreshEnd();
-      _this.canRefresh = false;
-      setTimeout(function () {
-        _this.refs.loadMore.innerHTML = '正在加载...';
-        _this.loadEnd = false;
-        if (type) _this.setEnd();
-        _this.iScrollInstance.refresh();
-        _this.isRefreshIng = false;
-      }, 100);
-    }
-  }, {
-    key: 'init',
-    value: function init() {
-      var _this = this;
-      if (!_this.loadEnd && _this.onLoadMore) {
-        _this.loadMoreIng = true;
-        setTimeout(function () {
-          _this.onLoadMore(_this, function (type) {
-            _this.loadMoreEnd(type);
-          });
-        }, 100);
-      }
-    }
-  }]);
+    }, {
+        key: 'setEnd',
+        value: function setEnd() {
+            var _this = this;
+            _this.refs.loadMore.innerHTML = '加载完毕...';
+            _this.loadEnd = true;
+        }
 
-  return AppComponent;
+        //刷新iscroll
+
+    }, {
+        key: 'refresh',
+        value: function refresh() {
+            //
+            var _this = this;
+            setTimeout(function () {
+                _this.iScrollInstance.refresh();
+            }, 100);
+        }
+
+        //下拉刷新结束函数
+
+    }, {
+        key: 'refreshEnd',
+        value: function refreshEnd(type) {
+            //type true:加载完毕
+            var _this = this;
+            _this.refs.refresh.innerHTML = '下拉刷新...';
+            _this.iScrollInstance.refreshEnd();
+            _this.canRefresh = false;
+            setTimeout(function () {
+                _this.refs.loadMore.innerHTML = '正在加载...';
+                _this.loadEnd = false;
+                if (type) _this.setEnd();
+                _this.iScrollInstance.refresh();
+                _this.isRefreshIng = false;
+            }, 100);
+        }
+    }, {
+        key: 'init',
+        value: function init() {
+            var _this = this;
+            if (!_this.loadEnd && _this.onLoadMore) {
+                _this.loadMoreIng = true;
+                setTimeout(function () {
+                    _this.onLoadMore(_this, function (type) {
+                        _this.loadMoreEnd(type);
+                    });
+                }, 100);
+            }
+        }
+    }]);
+
+    return AppComponent;
 }(_react2.default.Component);
 
 AppComponent.defaultProps = {};
 
 exports.default = AppComponent;
 (function register() {
-  /* react-hot-loader/webpack */if (false) {
-    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-      return;
-    } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
-      __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/util/Scroller/index.js");return;
-    } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
-      /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
-        continue;
-      }var namedExport = void 0;try {
-        namedExport = webpackExports[key];
-      } catch (err) {
-        continue;
-      }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/util/Scroller/index.js");
+    /* react-hot-loader/webpack */if (false) {
+        if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+            return;
+        } /* eslint-disable camelcase, no-undef */var webpackExports = typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__ : module.exports; /* eslint-enable camelcase, no-undef */if (typeof webpackExports === 'function') {
+            __REACT_HOT_LOADER__.register(webpackExports, 'module.exports', "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/util/Scroller/index.js");return;
+        } /* eslint-disable no-restricted-syntax */for (var key in webpackExports) {
+            /* eslint-enable no-restricted-syntax */if (!Object.prototype.hasOwnProperty.call(webpackExports, key)) {
+                continue;
+            }var namedExport = void 0;try {
+                namedExport = webpackExports[key];
+            } catch (err) {
+                continue;
+            }__REACT_HOT_LOADER__.register(namedExport, key, "/Users/wangxiaolong/Desktop/work/my-items/client/src/containers/util/Scroller/index.js");
+        }
     }
-  }
 })();
 
 /***/ }),

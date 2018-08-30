@@ -19270,26 +19270,32 @@ var _ref9 = _jsx('p', {
 var _ref11 = _jsx('p', {}, void 0, '\u5E38\u7528\u7F51\u7AD9');
 
 var _ref12 = _jsx('a', {
+    target: '_blank',
     href: 'https://segmentfault.com'
 }, void 0, 'segmentfault');
 
 var _ref13 = _jsx('a', {
+    target: '_blank',
     href: 'https://juejin.im/'
 }, void 0, '\u6398\u91D1');
 
 var _ref14 = _jsx('a', {
+    target: '_blank',
     href: 'http://www.ruanyifeng.com/home.html'
 }, void 0, '\u962E\u4E00\u5CF0');
 
 var _ref15 = _jsx('a', {
+    target: '_blank',
     href: 'https://github.com/longfei59418888'
 }, void 0, 'my github');
 
 var _ref16 = _jsx('a', {
+    target: '_blank',
     href: 'http://www.alloyteam.com/'
 }, void 0, 'Alloy Team');
 
 var _ref17 = _jsx('a', {
+    target: '_blank',
     href: 'http://www.daqianduan.com/'
 }, void 0, '\u5927\u524D\u7AEF');
 

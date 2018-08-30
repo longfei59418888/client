@@ -80,12 +80,12 @@ export default class Main extends React.Component {
                                     <img src={require('./image/wangl.png')} alt=""/>
                                     <p>常用网站</p>
                                 </div>
-                                <a href="https://segmentfault.com">segmentfault</a>
-                                <a href="https://juejin.im/">掘金</a>
-                                <a href="http://www.ruanyifeng.com/home.html">阮一峰</a>
-                                <a href="https://github.com/longfei59418888">my github</a>
-                                <a href="http://www.alloyteam.com/">Alloy Team</a>
-                                <a href="http://www.daqianduan.com/">大前端</a>
+                                <a target='_blank' href="https://segmentfault.com">segmentfault</a>
+                                <a target='_blank' href="https://juejin.im/">掘金</a>
+                                <a target='_blank' href="http://www.ruanyifeng.com/home.html">阮一峰</a>
+                                <a target='_blank' href="https://github.com/longfei59418888">my github</a>
+                                <a target='_blank' href="http://www.alloyteam.com/">Alloy Team</a>
+                                <a target='_blank' href="http://www.daqianduan.com/">大前端</a>
                             </div>
                         </div>
                     </div>

@@ -36,8 +36,8 @@ var doSend = async (req, res) =>{
         title = titleStr[1].replace(/<!-- -->/g,'')
         description = title
     }
-    if(title) tpl = tpl.replace('<!--title-->', title)
-    if(description) tpl = tpl.replace('<!--description-->', description)
+    if(title) tpl = tpl.replace('前端知识,前端框架,react,css,javascript', title)
+    if(description) tpl = tpl.replace('XiaoLong的前端博客，主要介绍了前端的知识，前端趋势，前端框架，前端基础知识，js,css,react,vue等', description)
     res.writeHead(200, {"Content-Type": "text/html"});
     res.end(tpl.replace('<!--app-->', reactDom));
 }
